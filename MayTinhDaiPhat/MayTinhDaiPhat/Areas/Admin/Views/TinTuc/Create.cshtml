@@ -1,0 +1,70 @@
+﻿@model MayTinhDaiPhat.Model.TinTuc
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section masterjs { 
+  
+    <script>
+        var editor = CKEDITOR.replace('txtArea', {
+            customConfig: '/Assets/Admin/ckeditor/config.js'
+        });
+        $('#btnSelectImage2').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#HinhAnh').val(url);
+            };
+            finder.popup();
+        })
+    </script>
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <legend>Thêm Tin Tức</legend>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Tiêu Đề Tin</label>
+                @Html.TextBoxFor(model => model.TieuDe, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TieuDe)
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Loại Tin Tức</label>
+                @Html.DropDownListFor(model => model.MaDM, (SelectList)ViewBag.MaDM, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MaDM)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                @Html.TextBoxFor(model => model.HinhAnh, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.HinhAnh)
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <button type="submit" class="btn btn-primary" id="btnSelectImage2">
+                <i class="fa fa-arrow-circle-o-down"></i>
+                <span>Chọn Ảnh</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Mô Tả Tóm Tắt</label>
+                    @Html.TextAreaFor(model => model.NoiDung, new { @class = "form-control ", id = "txtArea" })
+                    @Html.ValidationMessageFor(model => model.NoiDung)
+                </div>
+            </div>
+        </div>
+          <p>
+           <input type="submit" value="Thêm" class=" btn-add add" />
+           @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-danger btn-xs btn-canel" })
+       </p>
+}
+

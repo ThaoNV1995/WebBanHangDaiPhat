@@ -1,0 +1,43 @@
+﻿@model MayTinhDaiPhat.Areas.Admin.Models.LoginModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/Style/Login.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrap">
+        <div id="content">
+            <div id="main">
+                <div class="full_w">
+                    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true);
+                        <div class="bao">
+                            <label for="login">Email:</label>
+                            @*<input name="txtEmail" type="text" id="txtEmail" class="text" style="font-size: Small; height: 20px;">*@
+                            @Html.TextBoxFor(x => x.UserName, new { @class = "text", @style = "font-size: Small; height: 20px;" })
+                            @Html.ValidationMessageFor(x => x.UserName)
+                            <label for="pass">Password:</label>
+                            @Html.PasswordFor(x => x.Password, new { @class = "text", @style = "font-size: Small; height: 20px;" })
+                            @Html.ValidationMessageFor(x => x.UserName)
+                            <span id="lblMsg" style="color: Red; font-size: Small;"></span>
+                            <div class="sep"></div>
+                            <button type="submit" name="btnOK" value="Login" id="btnOK" class="ok" style="font-weight: bold; height: 29px; width: 80px; cursor: pointer;">Login</button>
+
+                            <a class="button" href="">Forgotten password?</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

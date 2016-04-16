@@ -1,0 +1,49 @@
+﻿@model MayTinhDaiPhat.Model.HoaDonXuat
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section masterjs {
+    <script>
+        //Fix since CKEditor can't seem to find it's own relative basepath
+        CKEDITOR_BASEPATH = "~/Content/assets/plugins/form-ckeditor/";
+        CKEDITOR.config.htmlEncodeOutput = true;
+    </script>
+    <script>
+        //Eternicode Datepicker
+        $(".datepicker").datepicker({ todayHighlight: true });
+    </script>
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <legend>Thêm Hóa Đơn Nhập</legend>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Khách Hàng</label>(<span style="color:#FF0000">*</span>)
+                @Html.DropDownListFor(model => model.MaKH, (SelectList)ViewBag.MaKH, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MaKH)
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Nhân Viên</label>(<span style="color:#FF0000">*</span>)
+                @Html.DropDownListFor(model => model.MaNV, (SelectList)ViewBag.MaNV, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MaNV)
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Ngày Xuất</label>(<span style="color:#FF0000">*</span>)
+                @Html.TextBoxFor(model => model.NgayXuat, new { @class = "form-control form_datetime datepicker", placeholder = "Ngày Hết Hạn..." })
+                @Html.ValidationMessageFor(model => model.NgayXuat)
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn-primary btn">Thêm</button>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

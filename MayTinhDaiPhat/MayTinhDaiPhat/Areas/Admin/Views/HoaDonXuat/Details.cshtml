@@ -1,0 +1,43 @@
+﻿@model MayTinhDaiPhat.Model.HoaDonXuat
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HoaDonXuat</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KhachHang.TenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHang.TenKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhanVien.TenNV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhanVien.TenNV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayXuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayXuat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaHDX }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

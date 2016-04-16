@@ -1,0 +1,838 @@
+﻿@model IEnumerable<MayTinhDaiPhat.Model.SanPham>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="box_pro_special_home">
+    <div class="title_tab">
+        <a href="#tab1" class="cufon a_tab current">Sản phẩm khuyến mãi</a>
+        <a href="#tab2" class="cufon a_tab">Sản phẩm bán chạy</a>
+        <a href="#tab3" class="cufon a_tab">Sản phẩm mới</a>
+    </div><!--title_tab-->
+    <div class="clear"></div>
+    <div class="content_tab">
+        <div class="product_list home">
+            <a href="#" class="viewall">Xem tất cả &gt;&gt;</a>
+            <ul id="tab1" style="display:block;" class="ul cf">
+                
+                @foreach (var item in Model.Where(x => x.GiaCu != 0).Skip(1).Take(5))
+                {
+                <li>
+                    <div class="p_container">
+                        <a href="#" class="p_img"><img class="lazy" src="@item.AnhSP" data-src="@item.AnhSP" alt="@item.TenSP" style="visibility: visible; zoom: 1; opacity: 1;"></a>
+                        <div class="p_price img_price">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</div>
+                        <div class="container_old_price">
+
+                        </div>
+                        <div class="clear"></div>
+                        <a href="#" class="p_name">@item.TenSP</a>
+                        <div class="p_quantity">
+
+                            <i class="bg icon_in_stock"></i>@{if (item.SoLuong > 0)
+                                {
+                                <span>
+                                    Còn hàng
+                                </span>
+                                }
+                                else
+                                {
+                                <span>
+                                    Hết hàng
+                                </span>
+                                }
+                            }
+
+
+                        </div>
+
+                    </div><!--wrap_pro-->
+                    <div class="hover_content_pro tooltip" style="left: 184.5px; top: 100px; display: none;">
+                        <a href="#" class="hover_name">@item.TenSP</a>
+
+                        <a href="" class="hover_brand"><img src="/media/brand/brand_137.jpg" alt=""></a>
+
+                        <div class="hori_line"></div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td width="60"><b>Giá bán:</b></td>
+                                    <td>
+                                        <span class="img_price_full">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</span>
+                                        <span class="hover_vat">
+
+
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr><td><b>Bảo hành:</b></td><td>Đổi mới trong 15 ngày. Bảo hành 12 tháng tại Dell Việt Nam hoặc tại Công ty An Khang</td></tr>
+                                <tr>
+                                    <td><b>Kho hàng:</b></td>
+                                    <td>
+                                        <div class="p_quantity">
+
+                                            <span>Còn hàng</span>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="hori_line"></div>
+                        <div class="hover_offer">
+
+                            <b>Mô tả tóm tắt:</b><br>
+
+                            + CPU Intel Pentium QC 3700U (1.6Ghz, 2Mb cache) / Ram 4GB DDR3L 1600MHZ/ HDD 500GB SATA3 (5400rpm)/ VGA Intel HD Graphics/ Display 14.0" LED/ Windows 10SL<br>
+
+                        </div>
+
+
+                        <div class="hori_line"></div>
+                        <div class="hover_offer">
+                            <b>Khuyến mại:</b><br>
+
+                            Túi xách Dell chính hãng cao cấp, Chuột không dây Microsoft 1850 trị giá 300.000 đ, bàn di chuột Logitech + Dịch vụ bảo hành tại nhà của Dell.<br>
+
+                        </div>
+
+                    </div><!--hover_content_pro-->
+                </li>
+                }
+            </ul>
+            <ul id="tab2" class="ul cf">
+                <a href="#" class="viewall">Xem tất cả &gt;&gt;</a>
+                <li class="nomar_l">
+                    <div class="p_container">
+                        <a href="#" class="p_img"><img class="lazy" src="~/Content/img/250_6151_dell_inspiron_3458_txtgh2_black.jpg" data-src="~/Content/img/250_6151_dell_inspiron_3458_txtgh2_black.jpg" alt="Dell Inspiron 3458 TXTGH1 Black" style="visibility: visible; zoom: 1; opacity: 1;"></a>
+                        <div class="p_price img_price">8.790.000</div>
+                        <div class="container_old_price">
+
+                        </div>
+                        <div class="clear"></div>
+                        <a href="#" class="p_name">Dell Inspiron 3458 TXTGH1 Black</a>
+                        <div class="p_quantity">
+
+                            <i class="bg icon_in_stock"></i><span>Còn hàng</span>
+
+                        </div>
+
+                    </div><!--wrap_pro-->
+                    <div class="hover_content_pro tooltip" style="display: none;">
+                        <a href="#" class="hover_name">Dell Inspiron 3458 TXTGH1 Black</a>
+
+                        <a href="" class="hover_brand"><img src="/media/brand/brand_137.jpg" alt=""></a>
+
+                        <div class="hori_line"></div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td width="60"><b>Giá bán:</b></td>
+                                    <td>
+                                        <span class="img_price_full">8.790.000</span>
+                                        <span class="hover_vat">
+                                            [Đã bao gồm VAT]
+
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr><td><b>Bảo hành:</b></td><td>Đổi mới trong 15 ngày. Bảo hành 12 tháng tại Dell Việt Nam hoặc tại An Khang</td></tr>
+                                <tr>
+                                    <td><b>Kho hàng:</b></td>
+                                    <td>
+                                        <div class="p_quantity">
+
+                                            <span>Còn hàng</span>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="hori_line"></div>
+                        <div class="hover_offer">
+
+                            <b>Mô tả tóm tắt:</b><br>
+
+                            + CPU Intel Core i3-4005U (1.7Ghz, 3M Cache L3)/ Ram 4GB DDR3L 1600Mhz/ HDD 500GB 5400Rpm/ VGA Intel HD Graphics 4400/ Display 14.0" LED (1366x768)/ Linux<br>
+
+                        </div>
+
+
+                        <div class="hori_line"></div>
+                        <div class="hover_offer">
+                            <b>Khuyến mại:</b><br>
+
+                            Túi xách Dell chính hãng, Chuột không dây trị giá 200.000 đ, Bàn di chuột Logitech , Túi chống sốc 14in + Dịch vụ bảo hành tại nhà của hãng Dell. Từ 23/03/2016 đến 01/04/2016 hoặc đến khi hết quà tặng 01 phiếu mua hàng siêu thị trị giá 300.000 vnd.<br>
+
+                        </div>
+
+                    </div><!--hover_content_pro-->
+                </li>
+                @foreach (var item in Model.Where(x => x.SoLuong <= 5).Skip(1).Take(5))
+                {
+                    <li>
+                        <div class="p_container">
+                            <a href="#" class="p_img"><img class="lazy" src="@item.AnhSP" data-src="@item.AnhSP" alt="@item.TenSP" style="visibility: visible; zoom: 1; opacity: 1;"></a>
+                            <div class="p_price img_price">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</div>
+                            <div class="container_old_price">
+
+                            </div>
+                            <div class="clear"></div>
+                            <a href="#" class="p_name">@item.TenSP</a>
+                            <div class="p_quantity">
+
+                                <i class="bg icon_in_stock"></i>@{if (item.SoLuong > 0)
+                                {
+                                <span>
+                                    Còn hàng
+                                </span>
+                                }
+                                else
+                                {
+                                <span>
+                                    Hết hàng
+                                </span>
+                                }
+                                }
+
+
+                            </div>
+
+                        </div><!--wrap_pro-->
+                        <div class="hover_content_pro tooltip" style="left: 184.5px; top: 100px; display: none;">
+                            <a href="#" class="hover_name">@item.TenSP</a>
+
+                            <a href="" class="hover_brand"><img src="/media/brand/brand_137.jpg" alt=""></a>
+
+                            <div class="hori_line"></div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td width="60"><b>Giá bán:</b></td>
+                                        <td>
+                                            <span class="img_price_full">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</span>
+                                            <span class="hover_vat">
+
+
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr><td><b>Bảo hành:</b></td><td>Đổi mới trong 15 ngày. Bảo hành 12 tháng tại Dell Việt Nam hoặc tại Công ty An Khang</td></tr>
+                                    <tr>
+                                        <td><b>Kho hàng:</b></td>
+                                        <td>
+                                            <div class="p_quantity">
+
+                                                <span>Còn hàng</span>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="hori_line"></div>
+                            <div class="hover_offer">
+
+                                <b>Mô tả tóm tắt:</b><br>
+
+                                + CPU Intel Pentium QC 3700U (1.6Ghz, 2Mb cache) / Ram 4GB DDR3L 1600MHZ/ HDD 500GB SATA3 (5400rpm)/ VGA Intel HD Graphics/ Display 14.0" LED/ Windows 10SL<br>
+
+                            </div>
+
+
+                            <div class="hori_line"></div>
+                            <div class="hover_offer">
+                                <b>Khuyến mại:</b><br>
+
+                                Túi xách Dell chính hãng cao cấp, Chuột không dây Microsoft 1850 trị giá 300.000 đ, bàn di chuột Logitech + Dịch vụ bảo hành tại nhà của Dell.<br>
+
+                            </div>
+
+                        </div><!--hover_content_pro-->
+                    </li>
+                }
+            </ul>
+            <ul id="tab3" class="ul cf">
+                <a href="#" class="viewall">Xem tất cả &gt;&gt;</a>
+                <li class="nomar_l">
+                    <div class="p_container">
+                        <a href="#" class="p_img"><img class="lazy" src="~/Content/img/250_6191_dell_inspiron_7447__n7447b__silver2_407x407.png" data-src="~/Content/img/250_6191_dell_inspiron_7447__n7447b__silver2_407x407.png" alt="Dell Inspiron 7447 G435706W" style="visibility: visible; zoom: 1; opacity: 1;"></a>
+                        <div class="p_price img_price">18.650.000</div>
+                        <div class="container_old_price">
+
+                        </div>
+                        <div class="clear"></div>
+                        <a href="#" class="p_name">Dell Inspiron 7447 G435706W</a>
+                        <div class="p_quantity">
+
+                            <i class="bg icon_in_stock"></i><span>Còn hàng</span>
+
+                        </div>
+                        <div class="p_compare"><input type="checkbox" name="/media/product/50_6191_dell_inspiron_7447__n7447b__silver2_407x407.png" class="p_check" id="compare_box_6191" onclick="add_compare_product(6191);"> </div>
+                    </div><!--wrap_pro-->
+                    <div class="hover_content_pro tooltip" style="display: none;">
+                        <a href="#" class="hover_name">Dell Inspiron 7447 G435706W</a>
+
+                        <a href="" class="hover_brand"><img src="/media/brand/brand_137.jpg" alt=""></a>
+
+                        <div class="hori_line"></div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td width="60"><b>Giá bán:</b></td>
+                                    <td>
+                                        <span class="img_price_full">18.650.000</span>
+                                        <span class="hover_vat">
+                                            [Đã bao gồm VAT]
+
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr><td><b>Bảo hành:</b></td><td>Đổi mới trong 15 ngày. Bảo hành 12 tháng tại Dell Việt Nam hoặc tại An Khang</td></tr>
+                                <tr>
+                                    <td><b>Kho hàng:</b></td>
+                                    <td>
+                                        <div class="p_quantity">
+
+                                            <span>Còn hàng</span>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="hori_line"></div>
+                        <div class="hover_offer">
+
+                            <b>Mô tả tóm tắt:</b><br>
+
+                            + CPU Intel Core i5-4210H(2.9Ghz upto 3.5Ghz, 3MB Cache L3)/ Ram 4GB DDR3L 1600Mhz/ HDD 500GB 5400rpm + 8G Flash/ VGA NVIDIA GeForce GTX 850M 4GB/ Display 14.0 inch LED HD(1366x768)/ Windows 8.1<br>
+
+                        </div>
+
+
+                        <div class="hori_line"></div>
+                        <div class="hover_offer">
+                            <b>Khuyến mại:</b><br>
+
+                            Túi xách Dell chính hãng, chuột không dây trị giá 200.000 VND, Tai nghe có Mic Genius HS-M200 trị giá 220.000 đ, Bàn di chuột Logitech + Dịch vụ bảo hành tại nhà của hãng DELL, Từ 23/03/2016 đến 01/04/2016 hoặc đến khi hết quà tặng 01 phiếu mua hàng siêu thị trị giá 300.000 vnd.<br>
+
+                        </div>
+
+                    </div><!--hover_content_pro-->
+                </li>
+                @foreach (var item in Model.OrderByDescending(x=>x.NgayDang).Skip(1).Take(5))
+                {
+                    <li>
+                        <div class="p_container">
+                            <a href="#" class="p_img"><img class="lazy" src="@item.AnhSP" data-src="@item.AnhSP" alt="@item.TenSP" style="visibility: visible; zoom: 1; opacity: 1;"></a>
+                            <div class="p_price img_price">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</div>
+                            <div class="container_old_price">
+
+                            </div>
+                            <div class="clear"></div>
+                            <a href="#" class="p_name">@item.TenSP</a>
+                            <div class="p_quantity">
+
+                                <i class="bg icon_in_stock"></i>@{if (item.SoLuong > 0)
+                                {
+                                    <span>
+                                        Còn hàng
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span>
+                                        Hết hàng
+                                    </span>
+                                }
+                                }
+
+
+                            </div>
+
+                        </div><!--wrap_pro-->
+                        <div class="hover_content_pro tooltip" style="left: 184.5px; top: 100px; display: none;">
+                            <a href="#" class="hover_name">@item.TenSP</a>
+
+                            <a href="" class="hover_brand"><img src="/media/brand/brand_137.jpg" alt=""></a>
+
+                            <div class="hori_line"></div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td width="60"><b>Giá bán:</b></td>
+                                        <td>
+                                            <span class="img_price_full">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</span>
+                                            <span class="hover_vat">
+
+
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr><td><b>Bảo hành:</b></td><td>Đổi mới trong 15 ngày. Bảo hành 12 tháng tại Dell Việt Nam hoặc tại Công ty An Khang</td></tr>
+                                    <tr>
+                                        <td><b>Kho hàng:</b></td>
+                                        <td>
+                                            <div class="p_quantity">
+
+                                                <span>Còn hàng</span>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="hori_line"></div>
+                            <div class="hover_offer">
+
+                                <b>Mô tả tóm tắt:</b><br>
+
+                                + CPU Intel Pentium QC 3700U (1.6Ghz, 2Mb cache) / Ram 4GB DDR3L 1600MHZ/ HDD 500GB SATA3 (5400rpm)/ VGA Intel HD Graphics/ Display 14.0" LED/ Windows 10SL<br>
+
+                            </div>
+
+
+                            <div class="hori_line"></div>
+                            <div class="hover_offer">
+                                <b>Khuyến mại:</b><br>
+
+                                Túi xách Dell chính hãng cao cấp, Chuột không dây Microsoft 1850 trị giá 300.000 đ, bàn di chuột Logitech + Dịch vụ bảo hành tại nhà của Dell.<br>
+
+                            </div>
+
+                        </div><!--hover_content_pro-->
+                    </li>
+                }
+            </ul>
+        </div><!--prouduct_list-->
+    </div><!--content_tab-->
+</div><!--box_pro_special_home-->
+<div id="hot_news_home">
+    <div class="title_box_right"><h3 class="h_title">Tin tức nổi bật</h3> </div>
+    <div class="content_box">
+        <div class="bg_gradient_bottom_title"></div>
+        <div class="top_news">
+            <a href="#"><img src="~/Content/img/120_87_2203_khuyen_mai_asus_2203.jpg" alt="Mua máy tháng 3, Nhận ngay quà hấp dẫn cùng Asus"> </a>
+            <a href="#">Mua máy tháng 3, Nhận ngay quà hấp dẫn cùng Asus (24-03-2016, 3:53 pm)</a>
+        </div>
+        <ul>
+            <li><span>»</span><a href="#">Cùng Samsung đón cơn lốc giá (22-03-2016, 5:17 pm)</a></li>
+            <li><span>»</span><a href="#">Săn Rồng Cùng MSI (24-03-2016, 4:03 pm)</a></li>
+            <li><span>»</span><a href="#">AN KHANG TUYỂN DỤNG NHÂN SỰ THÁNG 3-4 NĂM 2016 (21-03-2015, 3:55 pm)</a></li>
+            <li><span>»</span><a href="#">Đánh giá laptop Lenovo S410 máy tính xách tay mỏng nhẹ phân khúc tầm trung (02-11-2015, 3:54 pm)</a></li>
+        </ul>
+    </div>
+</div><!--hot_news_home-->
+<div class="clear"></div>
+<div class="title_box_center">
+    <h2 class="h_title">Laptop, Tablet</h2><span class="icon_right_title"></span>
+
+    <a href="#" class="viewall">Xem tất cả</a>
+</div><!--title_box_center-->
+<div class="clear space"></div>
+<div class="product_list float_l home" style="width:940px;">
+    <ul class="ul">
+
+        @foreach (var item in Model.OrderByDescending(x => x.MaDM==5).Skip(1).Take(10))
+        {
+            <li>
+                <div class="p_container">
+                    <a href="#" class="p_img"><img class="lazy" src="@item.AnhSP" data-src="@item.AnhSP" alt="@item.TenSP" style="visibility: visible; zoom: 1; opacity: 1;"></a>
+                    <div class="p_price img_price">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</div>
+                    <div class="container_old_price">
+
+                    </div>
+                    <div class="clear"></div>
+                    <a href="#" class="p_name">@item.TenSP</a>
+                    <div class="p_quantity">
+
+                        <i class="bg icon_in_stock"></i>@{if (item.SoLuong > 0)
+                        {
+                            <span>
+                                Còn hàng
+                            </span>
+                        }
+                        else
+                        {
+                            <span>
+                                Hết hàng
+                            </span>
+                        }
+                        }
+
+
+                    </div>
+
+                </div><!--wrap_pro-->
+                <div class="hover_content_pro tooltip" style="left: 184.5px; top: 100px; display: none;">
+                    <a href="#" class="hover_name">@item.TenSP</a>
+
+                    <a href="" class="hover_brand"><img src="/media/brand/brand_137.jpg" alt=""></a>
+
+                    <div class="hori_line"></div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="60"><b>Giá bán:</b></td>
+                                <td>
+                                    <span class="img_price_full">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</span>
+                                    <span class="hover_vat">
+
+
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr><td><b>Bảo hành:</b></td><td>Đổi mới trong 15 ngày. Bảo hành 12 tháng tại Dell Việt Nam hoặc tại Công ty An Khang</td></tr>
+                            <tr>
+                                <td><b>Kho hàng:</b></td>
+                                <td>
+                                    <div class="p_quantity">
+
+                                        <span>Còn hàng</span>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="hori_line"></div>
+                    <div class="hover_offer">
+
+                        <b>Mô tả tóm tắt:</b><br>
+
+                        + CPU Intel Pentium QC 3700U (1.6Ghz, 2Mb cache) / Ram 4GB DDR3L 1600MHZ/ HDD 500GB SATA3 (5400rpm)/ VGA Intel HD Graphics/ Display 14.0" LED/ Windows 10SL<br>
+
+                    </div>
+
+
+                    <div class="hori_line"></div>
+                    <div class="hover_offer">
+                        <b>Khuyến mại:</b><br>
+
+                        Túi xách Dell chính hãng cao cấp, Chuột không dây Microsoft 1850 trị giá 300.000 đ, bàn di chuột Logitech + Dịch vụ bảo hành tại nhà của Dell.<br>
+
+                    </div>
+
+                </div><!--hover_content_pro-->
+            </li>
+        }
+
+
+    </ul>
+</div><!--prouduct_list-->
+<div class="banner_right_pro">
+    <a href="#"><img class="lazy" data-src="" alt="Quảng cáo" /></a>
+</div>
+<div class="clear"></div>
+<div class="title_box_center">
+    <h2 class="h_title">Máy tính để bàn</h2><span class="icon_right_title"></span>
+   
+    <a href="#" class="viewall">Xem tất cả</a>
+</div><!--title_box_center-->
+<div class="clear space"></div>
+<div class="product_list float_l home" style="width:940px;">
+    <ul class="ul">
+
+
+        @foreach (var item in Model.OrderByDescending(x => x.MaDM==4).Skip(1).Take(10))
+        {
+            <li>
+                <div class="p_container">
+                    <a href="#" class="p_img"><img class="lazy" src="@item.AnhSP" data-src="@item.AnhSP" alt="@item.TenSP" style="visibility: visible; zoom: 1; opacity: 1;"></a>
+                    <div class="p_price img_price">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</div>
+                    <div class="container_old_price">
+
+                    </div>
+                    <div class="clear"></div>
+                    <a href="#" class="p_name">@item.TenSP</a>
+                    <div class="p_quantity">
+
+                        <i class="bg icon_in_stock"></i>@{if (item.SoLuong > 0)
+                        {
+                            <span>
+                                Còn hàng
+                            </span>
+                        }
+                        else
+                        {
+                            <span>
+                                Hết hàng
+                            </span>
+                        }
+                        }
+
+
+                    </div>
+
+                </div><!--wrap_pro-->
+                <div class="hover_content_pro tooltip" style="left: 184.5px; top: 100px; display: none;">
+                    <a href="#" class="hover_name">@item.TenSP</a>
+
+                    <a href="" class="hover_brand"><img src="/media/brand/brand_137.jpg" alt=""></a>
+
+                    <div class="hori_line"></div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="60"><b>Giá bán:</b></td>
+                                <td>
+                                    <span class="img_price_full">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</span>
+                                    <span class="hover_vat">
+
+
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr><td><b>Bảo hành:</b></td><td>Đổi mới trong 15 ngày. Bảo hành 12 tháng tại Dell Việt Nam hoặc tại Công ty An Khang</td></tr>
+                            <tr>
+                                <td><b>Kho hàng:</b></td>
+                                <td>
+                                    <div class="p_quantity">
+
+                                        <span>Còn hàng</span>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="hori_line"></div>
+                    <div class="hover_offer">
+
+                        <b>Mô tả tóm tắt:</b><br>
+
+                        + CPU Intel Pentium QC 3700U (1.6Ghz, 2Mb cache) / Ram 4GB DDR3L 1600MHZ/ HDD 500GB SATA3 (5400rpm)/ VGA Intel HD Graphics/ Display 14.0" LED/ Windows 10SL<br>
+
+                    </div>
+
+
+                    <div class="hori_line"></div>
+                    <div class="hover_offer">
+                        <b>Khuyến mại:</b><br>
+
+                        Túi xách Dell chính hãng cao cấp, Chuột không dây Microsoft 1850 trị giá 300.000 đ, bàn di chuột Logitech + Dịch vụ bảo hành tại nhà của Dell.<br>
+
+                    </div>
+
+                </div><!--hover_content_pro-->
+            </li>
+        }
+
+
+    </ul>
+</div><!--prouduct_list-->
+<div class="banner_right_pro">
+    <a href="#"><img class="lazy" data-src="" alt="Quảng cáo" /></a>
+</div>
+<div class="clear"></div>
+<div class="title_box_center">
+    <h2 class="h_title">Linh kiện máy tính</h2><span class="icon_right_title"></span>
+   
+    <a href="#" class="viewall">Xem tất cả</a>
+</div><!--title_box_center-->
+<div class="clear space"></div>
+<div class="product_list float_l home" style="width:940px;">
+    <ul class="ul">
+
+        @foreach (var item in Model.OrderByDescending(x => x.MaDM == 3).Skip(1).Take(10))
+        {
+            <li>
+                <div class="p_container">
+                    <a href="#" class="p_img"><img class="lazy" src="@item.AnhSP" data-src="@item.AnhSP" alt="@item.TenSP" style="visibility: visible; zoom: 1; opacity: 1;"></a>
+                    <div class="p_price img_price">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</div>
+                    <div class="container_old_price">
+
+                    </div>
+                    <div class="clear"></div>
+                    <a href="#" class="p_name">@item.TenSP</a>
+                    <div class="p_quantity">
+
+                        <i class="bg icon_in_stock"></i>@{if (item.SoLuong > 0)
+                        {
+                            <span>
+                                Còn hàng
+                            </span>
+                        }
+                        else
+                        {
+                            <span>
+                                Hết hàng
+                            </span>
+                        }
+                        }
+
+
+                    </div>
+
+                </div><!--wrap_pro-->
+                <div class="hover_content_pro tooltip" style="left: 184.5px; top: 100px; display: none;">
+                    <a href="#" class="hover_name">@item.TenSP</a>
+
+                    <a href="" class="hover_brand"><img src="/media/brand/brand_137.jpg" alt=""></a>
+
+                    <div class="hori_line"></div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="60"><b>Giá bán:</b></td>
+                                <td>
+                                    <span class="img_price_full">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</span>
+                                    <span class="hover_vat">
+
+
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr><td><b>Bảo hành:</b></td><td>Đổi mới trong 15 ngày. Bảo hành 12 tháng tại Dell Việt Nam hoặc tại Công ty An Khang</td></tr>
+                            <tr>
+                                <td><b>Kho hàng:</b></td>
+                                <td>
+                                    <div class="p_quantity">
+
+                                        <span>Còn hàng</span>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="hori_line"></div>
+                    <div class="hover_offer">
+
+                        <b>Mô tả tóm tắt:</b><br>
+
+                        + CPU Intel Pentium QC 3700U (1.6Ghz, 2Mb cache) / Ram 4GB DDR3L 1600MHZ/ HDD 500GB SATA3 (5400rpm)/ VGA Intel HD Graphics/ Display 14.0" LED/ Windows 10SL<br>
+
+                    </div>
+
+
+                    <div class="hori_line"></div>
+                    <div class="hover_offer">
+                        <b>Khuyến mại:</b><br>
+
+                        Túi xách Dell chính hãng cao cấp, Chuột không dây Microsoft 1850 trị giá 300.000 đ, bàn di chuột Logitech + Dịch vụ bảo hành tại nhà của Dell.<br>
+
+                    </div>
+
+                </div><!--hover_content_pro-->
+            </li>
+        }
+
+
+    </ul>
+</div><!--prouduct_list-->
+<div class="banner_right_pro">
+    <a href="#"><img class="lazy" data-src="" alt="Quảng cáo" /></a>
+</div>
+<div class="clear"></div>
+<div class="title_box_center">
+    <h2 class="h_title">Thiết bị ngoại vi</h2><span class="icon_right_title"></span>
+   
+    <a href="#" class="viewall">Xem tất cả</a>
+</div><!--title_box_center-->
+<div class="clear space"></div>
+<div class="product_list float_l home" style="width:940px;">
+    <ul class="ul">
+
+        @foreach (var item in Model.OrderByDescending(x => x.MaDM == 2).Skip(1).Take(10))
+        {
+            <li>
+                <div class="p_container">
+                    <a href="#" class="p_img"><img class="lazy" src="@item.AnhSP" data-src="@item.AnhSP" alt="@item.TenSP" style="visibility: visible; zoom: 1; opacity: 1;"></a>
+                    <div class="p_price img_price">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</div>
+                    <div class="container_old_price">
+
+                    </div>
+                    <div class="clear"></div>
+                    <a href="#" class="p_name">@item.TenSP</a>
+                    <div class="p_quantity">
+
+                        <i class="bg icon_in_stock"></i>@{if (item.SoLuong > 0)
+                        {
+                            <span>
+                                Còn hàng
+                            </span>
+                        }
+                        else
+                        {
+                            <span>
+                                Hết hàng
+                            </span>
+                        }
+                        }
+
+
+                    </div>
+
+                </div><!--wrap_pro-->
+                <div class="hover_content_pro tooltip" style="left: 184.5px; top: 100px; display: none;">
+                    <a href="#" class="hover_name">@item.TenSP</a>
+
+                    <a href="" class="hover_brand"><img src="/media/brand/brand_137.jpg" alt=""></a>
+
+                    <div class="hori_line"></div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="60"><b>Giá bán:</b></td>
+                                <td>
+                                    <span class="img_price_full">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</span>
+                                    <span class="hover_vat">
+
+
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr><td><b>Bảo hành:</b></td><td>Đổi mới trong 15 ngày. Bảo hành 12 tháng tại Dell Việt Nam hoặc tại Công ty An Khang</td></tr>
+                            <tr>
+                                <td><b>Kho hàng:</b></td>
+                                <td>
+                                    <div class="p_quantity">
+
+                                        <span>Còn hàng</span>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="hori_line"></div>
+                    <div class="hover_offer">
+
+                        <b>Mô tả tóm tắt:</b><br>
+
+                        + CPU Intel Pentium QC 3700U (1.6Ghz, 2Mb cache) / Ram 4GB DDR3L 1600MHZ/ HDD 500GB SATA3 (5400rpm)/ VGA Intel HD Graphics/ Display 14.0" LED/ Windows 10SL<br>
+
+                    </div>
+
+
+                    <div class="hori_line"></div>
+                    <div class="hover_offer">
+                        <b>Khuyến mại:</b><br>
+
+                        Túi xách Dell chính hãng cao cấp, Chuột không dây Microsoft 1850 trị giá 300.000 đ, bàn di chuột Logitech + Dịch vụ bảo hành tại nhà của Dell.<br>
+
+                    </div>
+
+                </div><!--hover_content_pro-->
+            </li>
+        }
+
+       
+
+    </ul>
+</div>
+<div class="banner_right_pro">
+    <a href="#"><img class="lazy" data-src="" alt="Quảng cáo" /></a>
+</div>
+<div class="clear"></div>

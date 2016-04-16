@@ -1,0 +1,77 @@
+﻿<div id="container_slider">
+    <div class="caroufredsel_wrapper">
+        <div id="slider">
+            <img src="~/Content/img/banner_f0935e4c.png" alt="c1">
+            <img src="~/Content/img/banner_65b9eea6.png" alt="c2">
+            <img src="~/Content/img/banner_38b3eff8.png" alt="c0">
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="thumb_slider">
+        <a href="" class="prevSlider hidden">
+            <img src="/template/2015/images/icon_prev.png" alt="prev">
+        </a>
+        <a href="" class="nextSlider hidden">
+            <img src="/template/2015/images/icon_next.png" alt="next">
+        </a>
+        <div class="caroufredsel_wrapper">
+            <div id="thumbs">
+                <span style="display: block; float: left; cursor: pointer;" rel="c0" class="">
+                    <a href="#" target="_blank" rel="nofollow">
+                        <img border="0" src="~/Content/img/banner_38b3eff8.png" width="720" height="300" alt="banner dell n5448">
+                    </a>
+                </span>
+                <span style="display: block; float: left; cursor: pointer;" rel="c1" class="active">
+                    <a href="#" target="_blank" rel="nofollow">
+                        <img border="0" src="~/Content/img/banner_f0935e4c.png" width="720" height="300" alt="samsung">
+                    </a>
+                </span>
+                <span style="display: block; float: left; cursor: pointer;" rel="c2" class="">
+                    <a href="#" target="_blank" rel="nofollow">
+                        <img border="0" src="~/Content/img/banner_65b9eea6.png" width="720" height="300" alt="khuyen mai thang 3">
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#slider').carouFredSel({
+            scroll: {
+                fx: 'crossfade',
+                onBefore: function (data) {
+                    //$('#thumbs').trigger( 'slideTo', [ $('#thumbs img[alt='+ data.items.visible.attr( 'alt' ) +']'), -2 ] );
+                    $('#thumbs span').removeClass("active");
+                    $('#thumbs span[rel=' + data.items.visible.attr('alt') + ']').addClass("active");
+                }
+            }
+        });
+
+        $('#thumbs').carouFredSel({
+            auto: {
+                play: false,
+                pauseOnHover: true
+            },
+            items: 3,
+            prev: '.prevSlider',
+            next: '.nextSlider',
+        });
+
+        $('#thumbs span').mousemove(function (e) {
+            $('#slider').trigger('slideTo', [$('#slider img[alt=' + $(this).attr('rel') + ']')]);
+        }).css('cursor', 'pointer');
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $(".title_tab a").click(function () {
+            $(".title_tab a").removeClass("current");
+            $(this).addClass("current");
+
+            $(".cf").hide();
+            $($(this).attr("href")).show();
+            return false;
+        });
+    });
+</script>

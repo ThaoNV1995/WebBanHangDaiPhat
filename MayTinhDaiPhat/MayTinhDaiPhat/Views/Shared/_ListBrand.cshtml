@@ -1,0 +1,39 @@
+﻿
+<div id="brand_list">
+    <a href="javascript:void(0)" class="bg btn_carousel1 prev" style="display: block;"></a>
+    <a href="javascript:void(0)" class="bg btn_carousel1 next" style="display: block;"></a>
+    <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 1080px; height: 50px; margin: 0px; overflow: hidden;">
+        <ul class="ul" style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; width: 3480px; height: 50px; z-index: auto;">
+
+            <li><a href="#"><img class="lazy" src="~/Content/img/banner_38b3eff8.png" /></a></li>
+            <li><a href="#"><img class="lazy" src="~/Content/img/banner_38b3eff8.png" /></a></li>
+            <li><a href="#"><img class="lazy" src="~/Content/img/banner_38b3eff8.png" /></a></li>
+            <li><a href="#"><img class="lazy" src="~/Content/img/banner_38b3eff8.png" /></a></li>
+            <li><a href="#"><img class="lazy" src="~/Content/img/banner_38b3eff8.png" /></a></li>
+            <li><a href="#"><img class="lazy" src="~/Content/img/banner_38b3eff8.png" /></a></li>
+            <li><a href="#"><img class="lazy" src="~/Content/img/banner_38b3eff8.png" /></a></li>
+            <li><a href="#"><img class="lazy" src="~/Content/img/banner_38b3eff8.png" /></a></li>
+            <li><a href="#"><img class="lazy" src="~/Content/img/banner_38b3eff8.png" /></a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $(window).load(function () {
+        $('#brand_list ul').carouFredSel({
+            auto: {
+                play: true,
+                pauseOnHover: true
+            },
+            prev: '.prev',
+            next: '.next',
+            'direction': 'left',
+            mousewheel: true,
+            scroll: 1,
+            swipe: {
+                onMouse: true,
+                onTouch: true
+            }
+        });
+
+    });
+</script>

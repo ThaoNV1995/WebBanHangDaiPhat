@@ -1,0 +1,81 @@
+﻿@model MayTinhDaiPhat.Model.ChiTietHoaDonXuat
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section masterjs {
+    <link type="text/css" href="~/Content/assets/plugins/form-daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <script type="text/javascript" src="~/Content/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script src="~/Content/assets/plugins/ckfinder/ckfinder.js"></script>
+    <script type="text/javascript" src="~/Content/assets/plugins/form-ckeditor/ckeditor.js"></script>  	<!-- CKEditor -->
+    <script>
+        //Fix since CKEditor can't seem to find it's own relative basepath
+        CKEDITOR_BASEPATH = "~/Content/assets/plugins/form-ckeditor/";
+        CKEDITOR.config.htmlEncodeOutput = true;
+    </script>
+    <script>
+        //Eternicode Datepicker
+        $(".datepicker").datepicker({ todayHighlight: true });
+        $('#btnSelectImage2').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#AnhSP').val(url);
+            };
+            finder.popup();
+        })
+    </script>
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <legend>Thêm Chi Tiết Hóa Đơn Xuất</legend>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Tên Sản Phẩm</label>(<span style="color:#FF0000">*</span>)
+                @Html.DropDownListFor(model => model.MaSP, (SelectList)ViewBag.MaSP, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MaSP)
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Hóa Đơn Xuất</label>(<span style="color:#FF0000">*</span>)
+                @Html.DropDownListFor(model => model.MaHDX, (SelectList)ViewBag.MaHDX, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MaHDX)
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Đơn Gía</label>(<span style="color:#FF0000">*</span>)
+                <div class="input-group m-bot15">
+                    <span class="input-group-addon">$</span>
+                    @Html.TextBoxFor(model => model.DonGia, new { @class = "form-control" })
+                    <span class="input-group-addon">.000</span>
+                </div>
+                @Html.ValidationMessageFor(model => model.DonGia)
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Chiết Khấu</label>(<span style="color:#FF0000">*</span>)
+                @Html.TextBoxFor(model => model.ChietKhau, new { @class = "form-control", placeholder = "Số Lượng..." })
+                @Html.ValidationMessageFor(model => model.ChietKhau)
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Số Lượng</label>(<span style="color:#FF0000">*</span>)
+                @Html.TextBoxFor(model => model.SoLuong, new { @class = "form-control", placeholder = "Số Lượng..." })
+                @Html.ValidationMessageFor(model => model.SoLuong)
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn-primary btn">Thêm</button>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

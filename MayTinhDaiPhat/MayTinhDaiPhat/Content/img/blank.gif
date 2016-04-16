@@ -1,0 +1,1118 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Nội dung không tồn tại</title>
+  	<meta http-equiv="refresh" content="1000" />
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="error 404"/>
+    <meta name="description" content="Đường link cần xem không có trên website hoặc đã bị xóa"/>
+    
+    <meta content="DOCUMENT" name="RESOURCE-TYPE" />
+  	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <link rel="shortcut icon" href="/template/2015/images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/template/2015/script/style_new.css" type="text/css"/>
+  	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css' />
+  	<!--[if lt IE 9]>
+ 	<style>.p_img{display:block;}</style>
+	<![endif]-->
+  	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27672174-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+  <!-- Google Code dành cho Thẻ tiếp thị lại -->
+<!--------------------------------------------------
+Không thể liên kết thẻ tiếp thị lại với thông tin nhận dạng cá nhân hay đặt thẻ tiếp thị lại trên các trang có liên quan đến danh mục nhạy cảm. Xem thêm thông tin và hướng dẫn về cách thiết lập thẻ trên: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 933530837;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/933530837/?value=0&guid=ON&script=0"/>
+</div>
+</noscript>
+  <script type="text/javascript" src="/template/2015/script/jquery.js"></script>
+  <script type="text/javascript" src="/includes/js/common.js"></script>
+  <script type="text/javascript" src="/includes/js/swfobject.js"></script>
+  <script type="text/javascript" src="/template/2015/script/common.js"></script>
+  <script type="text/javascript" src="/template/2015/script/carousel.js"></script>
+  <script src="/template/2015/script/mootools.js"></script>
+  <script type="text/javascript" src="/template/2015/script/lazyload.js"></script>
+  <script type="text/javascript" src="/ajax/product_view_history.php"></script>
+    <script type="text/javascript">
+      $(document).ready(function(e) {
+          var lazyloader = new LazyLoad({
+      		elements: ".lazy"
+      		});
+      });
+    </script>
+  <!--Array
+(
+    [name] => error
+    [view] => not-found
+    [view_id] => 0
+    [view_url] => 
+)
+1-->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <div id="wrap">
+    <script type="text/javascript">
+     $(document).ready(function(){
+      	var curr_text = "";
+      	var count_select = 0;
+      	var curr_element="";
+      	$("#text_search").keyup(function(b){  
+  			if (b.keyCode != 38 && b.keyCode != 40) {
+                inputString = $(this).val();
+                if(inputString.trim() !=''){
+                  $(".autocomplete-suggestions").show();
+                  $(".autocomplete-suggestions").load("/ajax/get_product_list.php?template=header&q="+encodeURIComponent(inputString));
+                }else  {
+                  $(".autocomplete-suggestions").hide();
+                  count_select=0;
+                }
+              }
+  		
+      		if (b.keyCode == 40) {
+      			count_select++;
+      			curr_element = $(".autocomplete-suggestion:nth-child("+count_select+")");
+      
+      			curr_text = curr_element.find(".suggest_link").text();
+      			$("#text_search").val(curr_text);
+      			$(".autocomplete-suggestion").removeClass("selected");
+      			$(curr_element).addClass("selected");
+      			
+      		}  
+  			if (b.keyCode == 38 && count_select > 1) {
+      			count_select--;
+      			curr_element = $(".autocomplete-suggestion:nth-child("+count_select+")");
+      			curr_text = curr_element.find(".suggest_link").text();
+      			$("#text_search").val(curr_text);
+      			$(".autocomplete-suggestion").removeClass("selected");
+      			$(curr_element).addClass("selected");
+      		}
+      	});    
+
+		$('body').click(function(){
+  			$(".autocomplete-suggestions").hide();
+  		});  
+      });
+  
+  	$(document).ajaxStop(function(){
+  		$(".p_price,.img_price").each(function(){
+  			if($(this).html()=='Liên hệ') $(this).css("font-family","Roboto");
+  		});
+  	});
+  </script>
+<div id="top">
+    <div class="container">
+      	<div class="banner_scroll scroll_left"><a href="/ad.php?id=99" target='_blank' rel='nofollow'><img border=0 src="http://www.ankhang.vn/media/banner/banner_ac627ab1.png" width='70' height='412' alt="banner 2 ben"/></a></div>
+		<div class="banner_scroll scroll_right"><a href="/ad.php?id=104" target='_blank' rel='nofollow'><img border=0 src="http://www.ankhang.vn/media/banner/banner_c9e1074f.png" width='70' height='412' alt="khuyen mai thang 1"/></a></div>
+        <ul class="ul"> 
+            <li><i class="bg icon_cskh"></i> <span>CSKH: </span><b>0904 332 781</b></li>
+            <li id="support_top"><i class="bg icon_yahoo"></i><span>Hỗ trợ trực tuyến</span>&nbsp;<i class="bg icon_drop"></i>
+                <div id="h_menu_sub_on1" class="h_menu_sub hOnline">
+                  <div class="hOnline-order">
+                    <div class="support_title">210 Thái Hà:(04)3537.9888</div>
+                    <div class="item"><div class="label"><a rel="nofollow" href="ymsgr:SendIM?ankhang_kd6">Hoàng Huy</a></div><div class="yahooicon"><a href="ymsgr:SendIM?ankhang_kd6"><img border="0" src="http://opi.yahoo.com/online?u=ankhang_kd6&m=g&t=0&l=us" /></a>  097.191.3355</div></div>
+                    
+                    <div class="item"><div class="label"><a rel="nofollow" href="ymsgr:SendIM?ankhang_kd12">Xuân Dũng</a></div><div class="yahooicon"><a href="ymsgr:SendIM?akcdungdx"><img border="0" src="http://opi.yahoo.com/online?u=akcdungdx&m=g&t=0&l=us"/></a>  0913.866872</div></div>
+                    
+                    <div class="item"><div class="label"><a rel="nofollow" href="ymsgr:SendIM?ankhang_kd15">Văn Thành</a></div><div class="yahooicon"><a href="ymsgr:SendIM?ankhang_kd12"><img border="0" src="http://opi.yahoo.com/online?u=ankhang_kd12&m=g&t=0&l=us"/></a>   0962.318.493</div></div> 
+                                    <!--    <div class="item"><div class="label"><a rel="nofollow" href="ymsgr:SendIM?ankhang_kd14">Vũ Tùng</a></div><div class="yahooicon"><a href="ymsgr:SendIM?ankhang_kd14"><img border="0" src="http://opi.yahoo.com/online?u=ankhang_kd14&m=g&t=0&l=us"/></a></div></div>  -->
+                                                            <div class="item"><div class="label"><a rel="nofollow" href="ymsgr:SendIM?ankhang_kd1">Hỗ Trợ Dự Án</a></div><div class="yahooicon"><a href="ymsgr:SendIM?ankhang_kd1"><img border="0" src="http://opi.yahoo.com/online?u=ankhang_kd1&m=g&t=0&l=us"/></a>  0981.999.688</div></div>
+                    <div class="item"><div class="label"><a rel="nofollow" href="ymsgr:SendIM?ankhang_kd1">Hỗ Trợ Kĩ Thuật</a></div><div class="yahooicon"><a href="ymsgr:SendIM?ankhang_kd1"><img border="0" src="http://opi.yahoo.com/online?u=ankhang_kd1&m=g&t=0&l=us"/></a>  04 3537 9888</br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp (line 104 - 105) </div></div>
+                  <div class="item"><div class="label"><a rel="nofollow" href="ymsgr:SendIM?ankhang_kd1"> Bảo Hành </a></div><div class="yahooicon"><a href="ymsgr:SendIM?ankhang_kd1"><img border="0" src="http://opi.yahoo.com/online?u=ankhang_kd1&m=g&t=0&l=us"/></a>   093 669 7181</div></div>
+                  </div><!--hOnline-order-->
+                </div><!--h_menu_sub-->
+            </li>
+            <li id="social_top" class="nomar_r">
+              <a href="https://www.facebook.com/AnKhangComputer/" class="bg icon_fb" target="_blank"></a>
+              <a href="https://www.youtube.com/channel/UCAteN_gfCEY7UxqhhPbbBXA" class="bg icon_yo" target="_blank"></a>
+              <a href="https://twitter.com/AnKhang_Laptop" class="bg icon_tw" target="_blank"></a>
+              <a href="https://plus.google.com/u/0/+M%C3%A8oMun8205" class="bg icon_go" target="_blank"></a>
+			</li>
+          	<li id="list_hot_news_top"><i class="bg icon_news"></i><a href="/tin-tuc">Tin tức nổi bật</a>
+          		<ul class="ul">
+                    
+                    
+                    <li><a href="/mua-may-thang-3-nhan-ngay-qua-hap-dan-cung-asus_idtin87.html"><img src="/media/news/120_87_2203_khuyen_mai_asus_2203.jpg" alt="Mua máy tháng 3, Nhận ngay quà hấp dẫn cùng Asus"/> <span>Mua máy tháng 3, Nhận ngay quà hấp dẫn cùng Asus</span> </a></li>
+                    
+                    
+                    
+                    <li><a href="/cung-samsung-don-con-loc-gia_idtin86.html"><img src="/media/news/120_86_ss.PNG" alt="Cùng Samsung đón cơn lốc giá"/> <span>Cùng Samsung đón cơn lốc giá</span> </a></li>
+                    
+                    
+                    
+                    <li><a href="/san-rong-cung-msi_idtin88.html"><img src="/media/news/120_88_unnamed.jpg" alt="Săn Rồng Cùng MSI"/> <span>Săn Rồng Cùng MSI</span> </a></li>
+                    
+                    
+                    
+                    <li><a href="/an-khang-thong-bao-tuyen-dung-nhan-su-thang-12-2016_idtin51.html"><img src="/media/news/120_51_tuyen_dung_nhan_su_2015_322015112037am.gif" alt="AN KHANG TUYỂN DỤNG NHÂN SỰ THÁNG 3-4 NĂM 2016"/> <span>AN KHANG TUYỂN DỤNG NHÂN SỰ THÁNG 3-4 NĂM 2016</span> </a></li>
+                    
+                    
+                    
+                    <li><a href="/danh-gia-laptop-lenovo-s410-may-tinh-xach-tay-mong-nhe-phan-khuc-tam-trung_idtin73.html"><img src="/media/news/120_73_laptop_lenovo_s410.jpg" alt="Đánh giá laptop Lenovo S410 máy tính xách tay mỏng nhẹ phân khúc tầm trung"/> <span>Đánh giá laptop Lenovo S410 máy tính xách tay mỏng nhẹ phân khúc tầm trung</span> </a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+          	</li>
+        </ul>
+    </div>
+</div><!--top-->
+<div class="clear"></div>
+<div class="container">
+    <div id="header">
+      <a href="/" id="logo"><img src="/media/banner/logo_logo.png" alt="Nội dung không tồn tại" /></a>
+      <div id="banner_header"><a href="/ad.php?id=52" target='_blank' rel='nofollow'><img border=0 src="http://www.ankhang.vn/media/banner/banner_9a115815.gif" width='720' height='80' alt=""/></a></div>
+      <div id="header_right">
+        <div id="login_header">
+          
+          <i class="bg icon_user"></i><a href="/taikhoan" rel="nofollow">Tài khoản</a>
+          
+        </div>
+        <div id="cart" onclick="location.href='/gio-hang'"><i class="bg icon_cart"></i> Giỏ hàng (<span id="count_shopping_cart_store">0</span>) </div>
+      </div>
+    </div><!--header-->
+  	<script type="text/javascript">
+  	$(document).ready(function(){
+      	$(".sub_nav").each(function(){
+      		//sort_sub_nav(0,16,$(this).find("li"),$(this));
+      	});     
+        $("#nav_vertical li").hover(function(){
+            $(this).children(".sub_nav").show();
+        },function(){
+            $(this).children(".sub_nav").hide();
+        });
+    });
+  	</script>
+  	<script type="text/javascript">
+  	$(document).ready(function(){
+      $(window).scroll(function(){
+      	t = $(window).scrollTop();
+      	if(t > 500) $("#nav_horizontal").addClass("fixed");
+      	else $("#nav_horizontal").removeClass("fixed");
+      	});
+      });	
+  	</script>
+  <div class="clear"></div>
+</div><!--container-->
+<div id="nav_horizontal">
+  <div class="container">
+    <style>#nav_vertical:hover .ul_menu{visibility:visible !important; display:block;}</style>
+    <div id="nav_vertical">
+      <div class="bg title_nav_verticle"></div>
+      <ul class="ul ul_menu" style="visibility:hidden;">
+        
+        
+        <li><span class="icon_menu"><span><img src="/media/category/cat_d6409ce788694525a3926ddc77ebaa2b.png" alt="Laptop, Tablet" /></span></span><a href="/may-tinh-xach-tay_dm167.html" class="root">Laptop, Tablet<span class="icon-nav-hover"></span></a>
+          
+          <div class="sub_nav">
+            
+            <div class="box_cate">
+              <a href="/laptop_dm2.html" class="sub1">Laptop</a>
+              
+              <a href="/laptop-asus_dm224.html" class="sub2">Asus</a>
+              
+              <a href="/laptop-dell_dm225.html" class="sub2">Dell</a>
+              
+              <a href="/laptop-acer_dm226.html" class="sub2">Acer</a>
+              
+              <a href="/laptop-hp_dm227.html" class="sub2">HP</a>
+              
+              <a href="/laptop-lenovo_dm228.html" class="sub2">Lenovo</a>
+              
+              <a href="/laptop-toshiba_dm229.html" class="sub2">Toshiba</a>
+              
+              <a href="/apple_dm230.html" class="sub2">Apple</a>
+              
+              <a href="/msi-gaming_dm259.html" class="sub2">MSI Gaming</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/may-tinh-bang-lai-laptop_dm170.html" class="sub1">Máy tính bảng lai Laptop</a>
+              
+              <a href="/may-tinh-bang-lai-laptop-lenovo_dm233.html" class="sub2">Lenovo</a>
+              
+              <a href="/may-tinh-bang-lai-laptop-dell_dm232.html" class="sub2">Dell</a>
+              
+              <a href="/may-tinh-bang-lai-laptop-asus_dm231.html" class="sub2">Asus</a>
+              
+              <a href="/may-tinh-bang-lai-laptop-hp_dm234.html" class="sub2">HP</a>
+              
+              <a href="/may-tinh-bang-lai-laptop-acer_dm239.html" class="sub2">Acer</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/may-tinh-bang_dm93.html" class="sub1">Máy tính bảng</a>
+              
+              <a href="/may-tinh-bang-asus_dm235.html" class="sub2">Asus</a>
+              
+              <a href="/may-tinh-bang-lenovo_dm236.html" class="sub2">Lenovo</a>
+              
+              <a href="/may-tinh-bang-acer_dm237.html" class="sub2">Acer</a>
+              
+              <a href="/may-tinh-bang-dell_dm238.html" class="sub2">Dell</a>
+              
+              <a href="/may-tinh-bang-samsung_dm240.html" class="sub2">Samsung</a>
+              
+              <a href="/apple-ipad_dm241.html" class="sub2">Apple Ipad</a>
+              
+            </div>
+            
+          </div><!--sub_nav-->
+          
+        </li>
+        
+        
+        
+        <li><span class="icon_menu"><span><img src="/media/category/cat_5a27f436856d4756a0efe2fd848d79d4.png" alt="Máy tính để bàn" /></span></span><a href="/may-tinh-de-ban_dm179.html" class="root">Máy tính để bàn<span class="icon-nav-hover"></span></a>
+          
+          <div class="sub_nav">
+            
+            <div class="box_cate">
+              <a href="/may-tinh-thuong-hieu_dm91.html" class="sub1">Máy tính Thương hiệu</a>
+              
+              <a href="/may-tinh-de-ban-dell_dm242.html" class="sub2">Dell</a>
+              
+              <a href="/may-tinh-de-ban-hp_dm243.html" class="sub2">HP</a>
+              
+              <a href="/may-tinh-de-ban-asus_dm244.html" class="sub2">Asus</a>
+              
+              <a href="/may-tinh-de-ban-acer_dm245.html" class="sub2">Acer</a>
+              
+              <a href="/may-tinh-de-ban-lenovo_dm246.html" class="sub2">Lenovo</a>
+              
+              <a href="/may-tinh-mini-intel_dm252.html" class="sub2">Intel</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/may-tinh-all-in-one_dm181.html" class="sub1">Máy tính All in One</a>
+              
+              <a href="/asus-all-in-one_dm247.html" class="sub2">Asus</a>
+              
+              <a href="/hp-all-in-one_dm248.html" class="sub2">HP</a>
+              
+              <a href="/dell-all-in-one_dm249.html" class="sub2">Dell</a>
+              
+              <a href="/lenovo-all-in-one_dm250.html" class="sub2">Lenovo</a>
+              
+              <a href="/acer-all-in-one_dm251.html" class="sub2">Acer</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/may-tinh-lap-rap_dm180.html" class="sub1">Máy tính lắp ráp</a>
+              
+              <a href="/may-tinh-lap-rap-sinh-vien_dm254.html" class="sub2">Máy tính lắp ráp Sinh viên</a>
+              
+              <a href="/may-tinh-lap-rap-van-phong_dm255.html" class="sub2">Máy tính lắp ráp Văn phòng</a>
+              
+              <a href="/may-tinh-lap-rap-do-hoa_dm256.html" class="sub2">Máy tính lắp ráp Đồ họa</a>
+              
+              <a href="/may-tinh-lap-rap-game_dm257.html" class="sub2">Máy tính lắp ráp Game</a>
+              
+              <a href="/may-tinh-lap-rap-giai-tri_dm258.html" class="sub2">Máy tính lắp ráp Giải trí</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/may-chu-server_dm92.html" class="sub1">Máy chủ - Server</a>
+              
+            </div>
+            
+          </div><!--sub_nav-->
+          
+        </li>
+        
+        
+        
+        <li><span class="icon_menu"><span><img src="/media/category/cat_d3306ab36c10519e174cd70561740e69.png" alt="Linh kiện máy tính" /></span></span><a href="/linh-kien-may-tinh_dm3.html" class="root">Linh kiện máy tính<span class="icon-nav-hover"></span></a>
+          
+          <div class="sub_nav">
+            
+            <div class="box_cate">
+              <a href="/linh-kien-laptop_dm4.html" class="sub1">Linh kiện Laptop</a>
+              
+              <a href="/o-cung-laptop-hdd_dm14.html" class="sub2">Ổ cứng Laptop (HDD)</a>
+              
+              <a href="/ram-laptop_dm15.html" class="sub2">Ram Laptop</a>
+              
+              <a href="/sac-pin-laptop_dm17.html" class="sub2">Sạc Pin Laptop</a>
+              
+              <a href="/ban-phim-laptop_dm18.html" class="sub2">Bàn phím Laptop</a>
+              
+              <a href="/o-quang-laptop-odd_dm19.html" class="sub2">Ổ quang Laptop (ODD)</a>
+              
+              <a href="/pin-laptop_dm20.html" class="sub2">Pin Laptop</a>
+              
+              <a href="/hdd-box_dm77.html" class="sub2">HDD Box</a>
+              
+              <a href="/man-hinh-laptop_dm110.html" class="sub2">Màn hình laptop</a>
+              
+              <a href="/box-chuyen-doi-tu-dvd-thanh-o-cung-ssd-hdd_dm223.html" class="sub2">Box chuyển đổi</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/linh-kien-desktop_dm5.html" class="sub1">Linh kiện Desktop</a>
+              
+              <a href="/ban-phim_dm33.html" class="sub2">Bàn phím</a>
+              
+              <a href="/bo-mach-chu_dm34.html" class="sub2">Bo mạch chủ</a>
+              
+              <a href="/bo-nho-trong_dm35.html" class="sub2">Bộ nhớ trong</a>
+              
+              <a href="/bo-vi-xu-ly_dm36.html" class="sub2">Bộ vi xử lý</a>
+              
+              <a href="/card-am-thanh_dm37.html" class="sub2">Card âm thanh</a>
+              
+              <a href="/card-man-hinh_dm38.html" class="sub2">Card đồ họa</a>
+              
+              <a href="/chuot-may-tinh_dm39.html" class="sub2">Chuột máy tính</a>
+              
+              <a href="/man-hinh_dm40.html" class="sub2">Màn hình</a>
+              
+              <a href="/o-dia-cung_dm41.html" class="sub2">Ổ đĩa cứng</a>
+              
+              <a href="/o-dia-quang_dm42.html" class="sub2">Ổ đĩa quang</a>
+              
+              <a href="/nguon_dm43.html" class="sub2">Nguồn</a>
+              
+              <a href="/vo-may-tinh_dm44.html" class="sub2">Vỏ máy tính</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/phan-mem_dm164.html" class="sub1">Phần mềm</a>
+              
+              <a href="/phan-mem-windows_dm102.html" class="sub2">Phần mềm Windows</a>
+              
+              <a href="/phan-mem-diet-virut_dm103.html" class="sub2">Phần mềm diệt virut</a>
+              
+              <a href="/phan-mem-office_dm104.html" class="sub2">Phần mềm Office</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/linh-kien-server_dm182.html" class="sub1">Linh kiện Server</a>
+              
+            </div>
+            
+          </div><!--sub_nav-->
+          
+        </li>
+        
+        
+        
+        <li><span class="icon_menu"><span><img src="/media/category/cat_a8aafc2b7d451a37409bddc7ee8a18e9.png" alt="Thiết bị Ngoại vi" /></span></span><a href="/thiet-bi-ngoai-vi_dm8.html" class="root">Thiết bị Ngoại vi<span class="icon-nav-hover"></span></a>
+          
+          <div class="sub_nav">
+            
+            <div class="box_cate">
+              <a href="/o-cung-gan-ngoai_dm56.html" class="sub1">Ổ cứng gắn ngoài</a>
+              
+              <a href="/hdd-buffalo_dm132.html" class="sub2">HDD Buffalo</a>
+              
+              <a href="/hdd-western_dm131.html" class="sub2">HDD Western</a>
+              
+              <a href="/hdd-transcend_dm130.html" class="sub2">HDD Transcend</a>
+              
+              <a href="/hdd-toshiba_dm129.html" class="sub2">HDD Toshiba</a>
+              
+              <a href="/hdd-hitachi_dm128.html" class="sub2">HDD Hitachi</a>
+              
+              <a href="/hdd-seagate_dm200.html" class="sub2">HDD Seagate</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/usb-flash_dm58.html" class="sub1">USB Flash</a>
+              
+              <a href="/usb-jvj_dm133.html" class="sub2">USB JVJ</a>
+              
+              <a href="/usb-kingston_dm134.html" class="sub2">USB Kingston</a>
+              
+              <a href="/usb-adata_dm135.html" class="sub2">USB Adata</a>
+              
+              <a href="/usb-transcend_dm136.html" class="sub2">USB Transcend</a>
+              
+              <a href="/usb-oscoo_dm206.html" class="sub2">USB OSCOO</a>
+              
+              <a href="/usb-sandisk_dm213.html" class="sub2">USB SanDisk</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/the-nho_dm57.html" class="sub1">Thẻ nhớ</a>
+              
+              <a href="/the-nho-stick-pro-due_dm137.html" class="sub2">Thẻ nhớ Stick Pro Due</a>
+              
+              <a href="/the-nho-xd-cac-loai_dm138.html" class="sub2">Thẻ nhớ XD các loại</a>
+              
+              <a href="/the-nho-cf-cac-loai_dm139.html" class="sub2">Thẻ nhớ CF các loại</a>
+              
+              <a href="/the-nho-sd-cac-loai_dm140.html" class="sub2">Thẻ nhớ SD các loại</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/loa-may-tinh_dm121.html" class="sub1">Loa máy tính</a>
+              
+              <a href="/loa-soundmax_dm220.html" class="sub2">Loa SoundMax</a>
+              
+              <a href="/loa-edifier_dm141.html" class="sub2">Loa Edifier</a>
+              
+              <a href="/loa-logitech_dm142.html" class="sub2">Loa Logitech</a>
+              
+              <a href="/loa-microlab_dm143.html" class="sub2">Loa Microlab</a>
+              
+              <a href="/loa-divoom_dm144.html" class="sub2">Loa Divoom</a>
+              
+              <a href="/loa-nimbus_dm145.html" class="sub2">Loa Nimbus</a>
+              
+              <a href="/loa-js_dm146.html" class="sub2">Loa JS</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/tai-nghe_dm120.html" class="sub1">Tai nghe</a>
+              
+              <a href="/headphone-logitech_dm148.html" class="sub2">Headphone Logitech</a>
+              
+              <a href="/headphone-genius_dm149.html" class="sub2">Headphone Genius</a>
+              
+              <a href="/headphone-sony_dm150.html" class="sub2">Headphone Sony</a>
+              
+              <a href="/headphone-creative_dm151.html" class="sub2">Headphone Creative</a>
+              
+              <a href="/headphone-sennheiser_dm152.html" class="sub2">Headphone SENNHEISER</a>
+              
+              <a href="/headphone-altec-lansing_dm153.html" class="sub2">Headphone Altec Lansing</a>
+              
+              <a href="/heaphone-microsoft_dm205.html" class="sub2">Heaphone Microsoft</a>
+              
+              <a href="/headphone-fantom_dm221.html" class="sub2">Headphone Fantom</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/cac-loai-cap_dm116.html" class="sub1">Các Loại Cáp</a>
+              
+              <a href="/cap-usb-noi-dai_dm186.html" class="sub2">Cáp USB nối dài</a>
+              
+              <a href="/cap-may-in_dm187.html" class="sub2">Cáp Máy in</a>
+              
+              <a href="/cap-hdmi_dm188.html" class="sub2">Cáp HDMI</a>
+              
+              <a href="/cap-vga_dm190.html" class="sub2">Cáp VGA</a>
+              
+              <a href="/cap-audio_dm189.html" class="sub2">Cáp Audio</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/thiet-bi-tro-giang_dm157.html" class="sub1">Thiết bị trợ giảng</a>
+              
+              <a href="/but-trinh-chieu_dm162.html" class="sub2">Bút trình chiếu</a>
+              
+              <a href="/but-thong-minh_dm114.html" class="sub2">Bút thông minh</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/reader_dm156.html" class="sub1">Reader</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/microphone_dm163.html" class="sub1">Microphone</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/webcam_dm155.html" class="sub1">Webcam</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/thiet-bi-khac_dm204.html" class="sub1">Thiết bị khác</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/o-quang-cam-ngoai-usb-ext_dm203.html" class="sub1">Ổ Quang cắm ngoài USB (Ext)</a>
+              
+            </div>
+            
+          </div><!--sub_nav-->
+          
+        </li>
+        
+        
+        
+        <li><span class="icon_menu"><span><img src="/media/category/cat_1bd42b172e604281749bd1165b8bfe9e.png" alt="Phụ kiện" /></span></span><a href="/phu-kien_dm183.html" class="root">Phụ kiện<span class="icon-nav-hover"></span></a>
+          
+          <div class="sub_nav">
+            
+            <div class="box_cate">
+              <a href="/phu-kien-laptop_dm16.html" class="sub1">Phụ Kiện Laptop</a>
+              
+              <a href="/bo-ve-sinh-laptop_dm96.html" class="sub2">Bộ vệ sinh laptop</a>
+              
+              <a href="/tui-chong-soc_dm94.html" class="sub2">Túi chống sốc</a>
+              
+              <a href="/ba-lo-tui-xach_dm97.html" class="sub2">Ba lô - Túi xách</a>
+              
+              <a href="/ban-di-chuot_dm98.html" class="sub2">Bàn di chuột</a>
+              
+              <a href="/de-tan-nhiet_dm99.html" class="sub2">Đế tản nhiệt</a>
+              
+              <a href="/tam-dan-man-hinh_dm100.html" class="sub2">Tấm dán màn hình</a>
+              
+              <a href="/tam-dan-ban-phim_dm101.html" class="sub2">Tấm dán bàn phím</a>
+              
+              <a href="/khoa-bao-ve_dm109.html" class="sub2">Khóa bảo vệ</a>
+              
+              <a href="/quat-usb_dm117.html" class="sub2">Quạt USB</a>
+              
+              <a href="/sac-pin-tich-dien_dm202.html" class="sub2">Sạc pin tích điện</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/phu-kien-may-tinh-bang_dm184.html" class="sub1">Phụ kiện Máy tính bảng</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/phu-kien-may-anh_dm185.html" class="sub1">Phụ kiện Máy ảnh</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/bao-da-cho-may-tinh-bang_dm212.html" class="sub1">Bao da cho máy tính bảng</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/sac-pin-du-phong_dm216.html" class="sub1">Sạc pin dự phòng</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/o-cam-dien_dm253.html" class="sub1">Ổ cắm điện</a>
+              
+            </div>
+            
+          </div><!--sub_nav-->
+          
+        </li>
+        
+        
+        
+        <li><span class="icon_menu"><span><img src="/media/category/cat_f6c8dd5cf8f95e19e99ef874e3edc242.png" alt="Thiết bị mạng" /></span></span><a href="/thiet-bi-mang_dm6.html" class="root">Thiết bị mạng<span class="icon-nav-hover"></span></a>
+          
+          <div class="sub_nav">
+            
+            <div class="box_cate">
+              <a href="/usb-modem-3g_dm113.html" class="sub1">USB Modem 3G</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/modem-router_dm45.html" class="sub1">Modem,  Router</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/card-mang_dm46.html" class="sub1">Card Mạng</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/mang-khong-day_dm47.html" class="sub1">Mạng không dây</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/printer-server_dm48.html" class="sub1">Printer Server</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/switch_dm49.html" class="sub1">Switch</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/thiet-bi-khac_dm50.html" class="sub1">Thiết Bị Khác</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/camera-ip_dm115.html" class="sub1">Camera IP</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/tv-box_dm215.html" class="sub1">TV Box</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/tv-usb_dm217.html" class="sub1">TV USB</a>
+              
+            </div>
+            
+          </div><!--sub_nav-->
+          
+        </li>
+        
+        
+        
+        <li><span class="icon_menu"><span><img src="/media/category/cat_e5eba3424ad2159a0b2d11954edc4d5f.png" alt="Máy văn phòng" /></span></span><a href="/may-van-phong_dm7.html" class="root">Máy văn phòng<span class="icon-nav-hover"></span></a>
+          
+          <div class="sub_nav">
+            
+            <div class="box_cate">
+              <a href="/may-fax_dm51.html" class="sub1">Máy Fax</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/may-huy-tai-lieu_dm52.html" class="sub1">Máy hủy tài liệu</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/may-in_dm53.html" class="sub1">Máy In</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/may-scan_dm54.html" class="sub1">Máy Scan</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/thiet-bi-luu-dien_dm55.html" class="sub1">Thiết bị lưu điện</a>
+              
+            </div>
+            
+          </div><!--sub_nav-->
+          
+        </li>
+        
+        
+        
+        <li><span class="icon_menu"><span><img src="/media/category/cat_caf4bb975a1395a5d716cc21ce8726a4.png" alt="Kỹ thuật số" /></span></span><a href="/ky-thuat-so_dm9.html" class="root">Kỹ thuật số<span class="icon-nav-hover"></span></a>
+          
+          <div class="sub_nav">
+            
+            <div class="box_cate">
+              <a href="/may-nghe-nhac-mp3_dm160.html" class="sub1">Máy nghe nhạc MP3</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/may-nghe-nhac-xem-phim-mp4-mp5_dm161.html" class="sub1">Máy nghe nhạc, xem phim MP4, MP5</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/may-ghi-am_dm106.html" class="sub1">Máy ghi âm</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/may-anh_dm107.html" class="sub1">Máy ảnh</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/may-quay-phim_dm108.html" class="sub1">Máy quay phim</a>
+              
+            </div>
+            
+          </div><!--sub_nav-->
+          
+        </li>
+        
+        
+        
+        <li><span class="icon_menu"><span><img src="/media/category/cat_1c2260be877cbd5693e493951e8eb430.png" alt="Điện thoại" /></span></span><a href="/dien-thoai_dm207.html" class="root">Điện thoại<span class="icon-nav-hover"></span></a>
+          
+          <div class="sub_nav">
+            
+            <div class="box_cate">
+              <a href="/dien-thoai-htc_dm209.html" class="sub1">Điện thoại HTC</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/dien-thoai-nokia_dm210.html" class="sub1">Điện thoại Nokia</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/dien-thoai-samsung_dm211.html" class="sub1">Điện thoại Samsung</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/dien-thoai-iphone_dm214.html" class="sub1">Điện thoại Iphone</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/dien-thoai-asus_dm260.html" class="sub1">Điện thoại Asus</a>
+              
+            </div>
+            
+          </div><!--sub_nav-->
+          
+        </li>
+        
+        
+        
+        <li><span class="icon_menu"><span><img src="/media/category/cat_ecf38479fe968c923e51ec4c77726614.png" alt="Tivi" /></span></span><a href="/tivi_dm84.html" class="root">Tivi<span class="icon-nav-hover"></span></a>
+          
+          <div class="sub_nav">
+            
+            <div class="box_cate">
+              <a href="/tivi-samsung_dm69.html" class="sub1">Tivi Samsung</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/tivi-lg_dm70.html" class="sub1">Tivi LG</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/tivi-sony_dm83.html" class="sub1">Tivi Sony</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/tivi-panasonic_dm75.html" class="sub1">Tivi Panasonic</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/tivi-toshiba_dm218.html" class="sub1">Tivi Toshiba</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/tivi-sharp_dm219.html" class="sub1">Tivi SHARP</a>
+              
+            </div>
+            
+            <div class="box_cate">
+              <a href="/tivi-tcl_dm222.html" class="sub1">Tivi TCL</a>
+              
+            </div>
+            
+          </div><!--sub_nav-->
+          
+        </li>
+        
+        
+      </ul>
+      <div class="clear"></div>
+    </div><!--nav_vertical-->
+    <div id="search" class="bg">
+      <form method="get" action="/tim" enctype="multipart/form-data">
+        <select name="scat_id" id="sel_cat" style="display: none;">
+          <option value="0">Tất cả</option>
+          
+          <option value="167">Laptop, Tablet</option>
+          
+          <option value="179">Máy tính để bàn</option>
+          
+          <option value="3">Linh kiện máy tính</option>
+          
+          <option value="8">Thiết bị Ngoại vi</option>
+          
+          <option value="183">Phụ kiện</option>
+          
+          <option value="6">Thiết bị mạng</option>
+          
+          <option value="7">Máy văn phòng</option>
+          
+          <option value="9">Kỹ thuật số</option>
+          
+          <option value="207">Điện thoại</option>
+          
+          <option value="84">Tivi</option>
+          
+        </select>
+        <div id="ul_cat" class="ul">
+          <div class="selected"><span>Tất cả</span> <i class="bg icon_drop"></i> </div>
+          <ul style="display: none;">
+            <li title="0">Tất cả</li>
+            
+            <li title="167">Laptop, Tablet</li>
+            
+            <li title="179">Máy tính để bàn</li>
+            
+            <li title="3">Linh kiện máy tính</li>
+            
+            <li title="8">Thiết bị Ngoại vi</li>
+            
+            <li title="183">Phụ kiện</li>
+            
+            <li title="6">Thiết bị mạng</li>
+            
+            <li title="7">Máy văn phòng</li>
+            
+            <li title="9">Kỹ thuật số</li>
+            
+            <li title="207">Điện thoại</li>
+            
+            <li title="84">Tivi</li>
+            
+          </ul>
+        </div>
+        <input type="text" class="text" id="text_search" name="q" placeholder="Gõ từ khóa tìm kiếm..."   autocomplete="off"/>
+        <input type="submit" id="submit_search" value="Search" />
+      </form>
+      <div class="autocomplete-suggestions"></div>
+    </div><!--search-->
+    <ul class="ul" id="nav-hori-right">
+      <li><i class="bg icon_deal_header"></i><a href="/deal">Giờ vàng<b>Giá sốc</b></a></li>
+      <li class="line_space_nav"></li>
+      <li><a href="">Mua hàng online<b>04 35 379 888</b></a></li>
+      <li class="line_space_nav"></li>
+      <li><a href="">Hotline <b>0922 744 999</b></a></li>
+    </ul>
+  </div>
+</div><!--nav-->
+<div class="clear"></div>
+    <style type="text/css">
+	h1 { font-size:18px; margin:0; padding:0}
+	#holder { width:500px; padding:6px; background-color:#FF9; margin:auto; border:1px solid #CCC;}
+</style>
+
+<div class="container">
+
+<br />
+
+<h1>Nội dung không tìm thấy !</h1>
+
+<p>Nội dung bạn cần xem không có hoặc đã bị xóa bỏ. Quý khách vui lòng xem nội dung khác</p>
+
+  
+</div>  
+    <div class="clear space2"></div>
+<div class="container spdx">
+  <div class="title_box_center">
+    <h2 class="h_title">Sản phẩm đã xem</h2><span class="icon_right_title"></span>
+  </div><!--title_box_center-->
+  <div class="clear space"></div>
+  <div class="product_list float_l" id="spdx"></div>
+  <script>$("#spdx").load("/san-pham-da-xem?type=ajax");</script>
+</div>
+<div class="clear"></div>
+<div id="footer">
+    <div class="container">
+        <div class="box_footer">
+            <h4>Thông tin an khang</h4>
+            <a rel="dofollow" href="/gioi-thieu">Giới thiệu</a>
+          	<a rel="dofollow" href="http://ankhang.vn/sitemap">Sơ đồ web</a>
+          	<a rel="dofollow" href="/lien-he">Liên hệ - hợp tác</a>
+          	<a href="/page/tai-khoan-ngan-hang">Tài khoản ngân hàng</a>
+        </div>
+        <div class="box_footer">
+            <h4>Hỗ trợ mua hàng</h4>
+            <a rel="nofollow" href="/page/mua-hang-online">Mua hàng Online</a>
+          	<a rel="nofollow" href="/page/huong-dan-mua-hang">Hướng dẫn mua hàng</a>
+          	<a rel="nofollow" href="/page/huong-dan-thanh-toan">Hướng dẫn thanh toán</a>
+          	<a rel="nofollow" href="/page/mua-hang-tra-gop">Mua hàng trả góp</a>
+        </div>
+        <div class="box_footer">
+            <h4>Chính sách chung</h4>
+            <a rel="nofollow" href="/page/chinh-sach-bao-hanh">Chính sách bảo hành</a>
+          	<a rel="nofollow" href="/page/chinh-sach-doi-moi">Chính sách đổi mới</a>
+          	<a rel="nofollow" href="/page/chinh-sach-van-chuyen">Chính sách vận chuyển</a>
+          	<a rel="nofollow" href="/page/chinh-sach-ho-tro">Chính sách hỗ trợ</a>
+        </div>
+        <div class="box_footer">
+            <h4>Tin tức</h4>
+            
+          	<a href="/tin-tuc/tin-cong-nghe">Tin công nghệ</a>
+          	
+          	<a href="/tin-tuc/tin-khuyen-mai">Tin khuyến mại</a>
+          	
+          	<a href="/tin-tuc/tin-cong-ty">Tin công ty</a>
+          	
+          	<a href="/tin-tuc/tuyen-dung">Tuyển dụng</a>
+          	
+        </div>
+        <div id="fanpage-footer">
+            <div class="fb-page" data-href="https://www.facebook.com/AnKhangComputer" data-width="300" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/AnKhangComputer"><a href="https://www.facebook.com/AnKhangComputer">Laptop chính hãng giá rẻ - ankhang.vn</a></blockquote></div></div>
+        </div>
+        <div class="clear"></div>
+    </div><!--container-->
+</div><!--footer-->
+<div id="footer_bottom">
+  <div class="container">
+    <div style="color: #feee02;
+    text-transform: uppercase;
+    font-size: 15px; font-weight:bold; display:block;">CÔNG TY TNHH MÁY TÍNH VÀ VIỄN THÔNG AN KHANG</div>
+    <div class="box_footer" >
+      <div class="box_footer" id="address-footer" >
+      <h4> CƠ SỞ 1 </h4>
+      	<span>
+          Địa chỉ: Số 210 Thái Hà, Trung Liệt</br>
+                   Đống Đa, Hà Nội <br/>
+        Điện thoại: 04 3537 9888 </br>
+                    Fax: 04 3537 9509 <br/>
+               Mail: sales@ankhang.vn<br/>
+        </div>
+      </div>
+      <div class="box_footer" id="address2-footer">
+    	<h4>CƠ SỞ 2</h4>
+      	<span>
+          Địa chỉ: Số 2, ngõ 71, Trần Quang Diệu</br>
+                   Đống Đa, Hà Nội    <br/>
+          Điện thoại: 04.3874 6868<br/>
+      	</span>
+    </div >
+    <div class="box_footer"  id="bh-footer">
+    	<h4>Trung tâm bảo hành</h4>
+      	<span>
+          Tầng 3, 210 Thái Hà, Đống Đa, Hà Nội<br/>
+          Điện thoại: 04 3537 9888  (+106)<br/>
+          Email: baohanh@ankhang.vn <br/>
+      	</span>
+    </div >
+    <div class="box_footer right">
+      <div id="social_bottom">
+        <span style="float:left; line-height:29px; margin-right:8px;">Chia sẻ</span>
+        <a href="https://www.facebook.com/AnKhangComputer" class="bg icon_fb" target="_blank"></a>
+        <a href="https://www.youtube.com/channel/UCAteN_gfCEY7UxqhhPbbBXA" class="bg icon_yo" target="_blank"></a>
+        <a href="https://twitter.com/AnKhang_Laptop" class="bg icon_tw" target="_blank"></a>
+        <a href="https://plus.google.com/+M%C3%A8oMun8205" class="bg icon_go" target="_blank"></a>
+      </div>
+      <div id="news_letter" class="bg">
+        <input type="text" id="email_newsletter" placeholder="Nhập email nhận tin KM"/>
+        <a href="javascript:subscribe_newsletter()">Gửi</a>
+      </div>
+      <a href="" target="_blank" id="bct"><img src="/template/2015/images/dangkybocongthuong.jpg" alt="Đăng ký bộ công thương" /></a>
+    </div>
+  </div>
+</div>
+<div id="tag_footer">
+    <div class="container">
+        <b>Hot tags:</b>
+        <a href="http://www.ankhang.vn/laptop_dm2.html">Laptop</a>
+        <a href="http://www.ankhang.vn/may-tinh-xach-tay_dm167.html">Máy tính xách tay</a>
+        <a href="http://www.ankhang.vn/may-tinh-bang-lai-laptop_dm170.html">Máy tính bảng lai laptop</a>
+        <a href="http://www.ankhang.vn/may-tinh-bang_dm93.html">Máy tính bảng</a>
+        <a href="http://www.ankhang.vn/linh-kien-desktop_dm5.html">Linh kiện máy tính</a>
+        <a href="http://www.ankhang.vn/linh-kien-laptop_dm4.html">Linh kiện laptop</a>
+        <a href="http://www.ankhang.vn/o-cung-laptop-hdd_dm14.html">Ổ cứng laptop</a>
+        <a href="http://www.ankhang.vn/ram-laptop_dm15.html">Ram laptop</a>
+        <a href="http://www.ankhang.vn/sac-pin-laptop_dm17.html">Sạc pin laptop</a>
+        <a href="http://www.ankhang.vn/man-hinh-laptop_dm110.html">Màn hình laptop</a>
+        <a href="http://www.ankhang.vn/pin-laptop_dm20.html">Pin laptop</a>
+        <a href="http://www.ankhang.vn/ban-phim-laptop_dm18.html">Bàn phím laptop</a>
+        <a href="http://www.ankhang.vn/o-quang-laptop-odd_dm19.html">Ổ quang laptop</a>
+       <a href="http://www.ankhang.vn/box-chuyen-doi-tu-dvd-thanh-o-cung-ssd-hdd_dm223.html">Box chuyển đổi</a>
+        <a href="http://www.ankhang.vn/o-cung-gan-ngoai_dm56.html">Ổ cứng gắn ngoài</a>
+        <a href="http://www.ankhang.vn/usb-flash_dm58.html">USB Flash </a>
+        <a href="http://www.ankhang.vn/laptop-asus_dm224.html?filter=%2C337%2C">Laptop Gaming</a>
+        <a href="http://www.ankhang.vn/may-van-phong_dm7.html">Máy văn phòng</a>
+        <a href="http://www.ankhang.vn/loa-may-tinh_dm121.html">Loa máy tính</a>
+        <a href="http://www.ankhang.vn/phu-kien_dm183.html">Phụ kiện - Đồ chơi laptop</a>
+        <a href="http://www.ankhang.vn/de-tan-nhiet_dm99.html">Quạt tản nhiệt</a>
+        <a href="http://www.ankhang.vn/thiet-bi-mang_dm6.html">Thiết bị mạng</a>     
+        <a href="http://www.ankhang.vn/may-nghe-nhac-mp3_dm160.html">Máy nghe nhạc</a>
+    </div>
+</div><!--tag_footer-->
+<div class="container" style="padding:10px 0 40px 0;">
+  <div id="copyright">Copyright &copy;2014 AnKhang. <a href="?show_version=mobile">Xem phiên bản Mobile</a></div>
+</div><!--container-->
+<script>
+    function subscribe_newsletter(){
+        var email = document.getElementById('email_newsletter').value;
+        if(email.length > 3){
+            $.post("/ajax/register_for_newsletter.php", {email:email}, function(data) {
+                if(data=='success') {alert("Quý khách đã đăng ký thành công "); $("#email_newsletter").val("Nhập Email nhận bản tin");}
+                else if(data=='exist'){ alert("Email này đã tồn tại");}
+                else { alert('Lỗi xảy ra, vui lòng thử lại '); }
+
+            });
+        }else{alert('Vui lòng nhập địa chỉ email');}
+                }
+</script>
+
+
+<script>
+$(document).ready(function(){ 
+  $("input.p_check").click(function(){
+    	if($("input.p_check").is(":checked")){
+    		$("#compare_area_home").fadeIn();
+        }else{
+            $("#compare_area_home").fadeOut();
+        } 
+  });
+});
+</script>
+<input type="hidden" id="product_compare_list" value="" />
+<div id="compare_area_home">
+  <span>So sánh sản phẩm</span>
+  <div class="compare_area">
+    <button type="button" class="btn_compare bg" onclick="compare_product('http://www.ankhang.vn/template/2015/script/blank.gif')" style="display:none;"></button>
+  </div>
+</div>
+
+  </div>
+  <script>
+    function open_oauth(service){
+    window.open("/login_oauth.php?service="+service+"&return_url=http://www.ankhang.vn/template/2015/script/blank.gif", "Login_OAuth", "width=600, height=500");
+    }
+  </script> 
+</body>
+</html>
+
+	<!-- Load time: 0.061 seconds  / 5.25 mb-->
+	<!-- Powered by HuraStore 6.6, Released: 16-04-2015 / Website: www.HuraSoft.vn -->

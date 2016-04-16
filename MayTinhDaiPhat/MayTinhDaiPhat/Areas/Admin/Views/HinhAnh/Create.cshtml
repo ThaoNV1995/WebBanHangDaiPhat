@@ -1,0 +1,143 @@
+﻿@model MayTinhDaiPhat.Model.HinhAnh
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section masterjs {
+    <script src="~/Content/assets/plugins/ckfinder/ckfinder.js"></script>
+<script type="text/javascript" src="~/Content/lib/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="~/Content/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="~/Content/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="~/Content/source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<link rel="stylesheet" type="text/css" href="~/Content/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+<script type="text/javascript" src="~/Content/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+<script type="text/javascript" src="~/Content/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script type="text/javascript" src="~/Content/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<script>
+    $(document).ready(function () {
+        $(".fancybox").fancybox({
+            openEffect: 'none',
+            closeEffect: 'none'
+        });
+    });
+</script>
+
+    <script>
+    //Eternicode Datepicker
+    $('#btnSelectImage2').on('click', function (e) {
+        e.preventDefault();
+        var finder = new CKFinder();
+        finder.selectActionFunction = function (url) {
+            $('#AnhSP').val(url);
+        };
+        finder.popup();
+    })
+    $(document).ready(function () {
+
+
+        $('#insert').click(function () {
+            var i = 0;
+            var maSP = $('#MaSP').val();
+            var hinhAnh = $('#AnhSP').val();
+            var HinhAnh = {
+                MaSP: maSP,
+                AnhSP: hinhAnh
+            }
+                $.ajax({
+                    url: '@Url.Action("Create","HinhAnh")',
+                    type: 'POST',
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify(HinhAnh),
+                    success: function (data) {
+                        $.ajax({
+                            url: '@Url.Action("GetListImage", "HinhAnh")',
+                            cache: true,
+                            type: 'POST',
+                            contentType: 'application/json; charset=utf-8',
+                            data: "{'id':'" + maSP + "'}",
+                            success: function (data) {
+                                var uls = '';
+                                for (var x = 0; x < data.length; x++) {
+                                    uls += '<li id="row_' + data[x]['MaHA'] + '">'
+                                         +
+                                        '<a data-ajax="true" style="" data-ajax-complete="$(' + "'#row_" + data[x]['MaHA'] + "'" + ').remove()" data-ajax-confirm="Bạn có muốn xóa hình ảnh này không" data-ajax-method="Delete" href="/Admin/HinhAnh/DeleteHinhAnh/' + data[x]['MaHA'] + '" class="fancybox-close "> </a>'
+                                        +
+                                        '<a class="fancybox" rel="gallery1" href="' + data[x]['AnhSP'] + '" title=""><img src="' + data[x]['AnhSP'] + '"/></a>' +
+                                        '</li>';
+                                }
+                                console.log(uls);
+                                $('#img').html(uls);
+                            }
+                        });
+                    }
+                });
+        })
+
+        $('#MaSP').change(function () {
+            var optionSelected = $(this).find("option:selected");
+            var value = optionSelected.val();
+            $.ajax({
+                url: '@Url.Action("GetListImage", "HinhAnh")',
+                cache: true,
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                data: "{'id':'" + value + "'}",
+                success: function (data) {
+                    var uls = '';
+                    for (var x = 0; x < data.length; x++) {
+                        uls += '<li id="row_' + data[x]['MaHA'] + '">'
+                              +
+                             '<a data-ajax="true" style="" data-ajax-complete="$(' + "'#row_" + data[x]['MaHA'] + "'" + ').remove()" data-ajax-confirm="Bạn có muốn xóa hình ảnh này không" data-ajax-method="Delete" href="/Admin/HinhAnh/DeleteHinhAnh/' + data[x]['MaHA'] + '" class="fancybox-close "> </a>'
+                             +
+                             '<a class="fancybox" rel="gallery1" href="' + data[x]['AnhSP'] + '" title=""><img src="' + data[x]['AnhSP'] + '"/></a>' +
+                             '</li>';
+                    }
+                    console.log(uls);
+                    $('#img').html(uls);
+                }
+            });
+        });
+    })
+    </script>
+}
+@*@using (Html.BeginForm())
+    {*@
+@Html.AntiForgeryToken()
+<legend>Thêm Hình Ảnh</legend>
+<div class="row">
+    <div class="col-lg-7">
+        <div class="form-group">
+            <label>Sản Phẩm</label>(<span style="color:#FF0000">*</span>)
+            @Html.DropDownListFor(model => model.MaSP, (SelectList)ViewBag.MaSP, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.MaSP)
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.TextBoxFor(model => model.AnhSP, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.AnhSP)
+        </div>
+    </div>
+    <div class="col-lg-2">
+        <button type="submit" class="btn btn-primary" id="btnSelectImage2">
+            <i class="fa fa-arrow-circle-o-down"></i>
+            <span>Chọn Ảnh</span>
+        </button>
+    </div>
+
+</div>
+
+<button type="submit" class="btn-add add" id="insert">Thêm</button>
+<p>
+    @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-danger btn-xs btn-canel" })
+</p>
+<div class="row">
+    <div class="bs-glyphicons">
+        <ul id="img" class="bs-glyphicons-list"></ul>
+    </div>
+</div>
+@*}*@
+
+
