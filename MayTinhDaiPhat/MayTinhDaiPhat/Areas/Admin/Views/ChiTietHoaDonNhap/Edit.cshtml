@@ -1,0 +1,80 @@
+﻿@model MayTinhDaiPhat.Model.ChiTietHoaDonNhap
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section masterjs {	<!-- CKEditor -->
+    <script>
+        //Fix since CKEditor can't seem to find it's own relative basepath
+        CKEDITOR_BASEPATH = "~/Content/assets/plugins/form-ckeditor/";
+        CKEDITOR.config.htmlEncodeOutput = true;
+    </script>
+    <script>
+        //Eternicode Datepicker
+        $(".datepicker").datepicker({ todayHighlight: true });
+        $('#btnSelectImage2').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#AnhSP').val(url);
+            };
+            finder.popup();
+        })
+    </script>
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <legend>Thêm Chi Tiết Hóa Đơn Nhập</legend>
+    @Html.TextBoxFor(model => model.MaCTHDN, new { @class = "form-control hidden" })
+   <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Tên Sản Phẩm</label>
+                @Html.DropDownList("MaSP", String.Empty)
+                @Html.ValidationMessageFor(model => model.MaSP)
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Hóa Đơn Nhập</label>
+                <div>
+                    @Html.DropDownList("MaHDN", String.Empty)
+                    @Html.ValidationMessageFor(model => model.MaHDN)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Đơn Gía</label>
+                <div>
+                    @Html.TextBoxFor(model => model.DonGia, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.DonGia)
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Chiết Khấu</label>
+                @Html.TextBoxFor(model => model.ChietKhau, new { @class = "form-control", placeholder = "Số Lượng..." })
+                @Html.ValidationMessageFor(model => model.ChietKhau)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Số Lượng</label>
+                @Html.TextBoxFor(model => model.SoLuong, new { @class = "form-control", placeholder = "Số Lượng..." })
+                @Html.ValidationMessageFor(model => model.SoLuong)
+            </div>
+        </div>
+    </div>
+<p>
+           <input type="submit" value="Sửa" class=" btn-add add" />
+           @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-danger btn-xs btn-canel" })
+       </p>
+}

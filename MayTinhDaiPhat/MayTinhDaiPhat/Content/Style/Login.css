@@ -1,0 +1,85 @@
+﻿body {
+    background: #f3f3f3 url(/img/bg_login_top.jpg) no-repeat top center;
+    color: #bebebe;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    margin: 0;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 400px;
+}
+
+#content {
+    margin: 120px 0 10px 0;
+}
+
+#content #main {
+    float: right;
+    margin: 0 0 12px 0;
+    width: 400px;
+}
+
+#main label {
+    color: #575757;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    padding: 0 0 0 3px;
+}
+
+#main input, #main select, #main textarea {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    font-size: 11px;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    padding: 5px 3px;
+}
+
+#main .text {
+    margin: 0 0 12px 0;
+    width: 98%;
+}
+
+.bao {
+    margin: 15px;
+}
+
+.sep {
+    border-bottom: 1px dashed #DDDDDD;
+    margin: 10px 0;
+}
+
+#main .ok {
+    background: #F3F3F3 url(/img/i_ok.png) no-repeat 4px center;
+    padding-left: 25px;
+}
+
+.button {
+    background: #F3F3F3;
+    border: 1px solid #DCDCDC;
+    border-radius: 2px;
+    color: #444444;
+    cursor: pointer;
+    display: inline-block;
+    font: 700 11px Tahoma, Arial, sans-serif;
+    margin-right: 10px;
+    padding: 7px 12px 7px 12px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #FFFFFF;
+}
+
+#main .full_w {
+    background: #ffffff;
+    border: 1px solid #DCDDE1;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 0px 1px rgba(235, 235, 235, 1);
+    -moz-box-shadow: 2px 2px 0px 1px rgba(235, 235, 235, 1);
+    box-shadow: 2px 2px 0px 1px rgba(235, 235, 235, 1);
+    color: #848484;
+    margin: 0 0 5px 0;
+}

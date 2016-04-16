@@ -1,0 +1,65 @@
+﻿@model MayTinhDaiPhat.Model.NhanVien
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section masterjs { 	<!-- CKEditor -->
+    <script>
+        //Fix since CKEditor can't seem to find it's own relative basepath
+        CKEDITOR_BASEPATH = "~/Content/assets/plugins/form-ckeditor/";
+        CKEDITOR.config.htmlEncodeOutput = true;
+    </script>
+    <script>
+        //Eternicode Datepicker
+        $(".datepicker").datepicker({ todayHighlight: true });
+        $('#btnSelectImage2').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#HinhAnh').val(url);
+            };
+            finder.popup();
+        })
+    </script>
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <legend>Thêm Nhân Viên</legend>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Tên Nhân Viên</label>(<span style="color:#FF0000">*</span>)
+                @Html.TextBoxFor(model => model.TenNV, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TenNV)
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Quyền</label>(<span style="color:#FF0000">*</span>)
+                @Html.DropDownListFor(model=>model.MaQuyen, (SelectList)ViewBag.MaQuyen, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MaQuyen)
+            </div>
+        </div>
+        </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Tên Đăng Nhập</label>(<span style="color:#FF0000">*</span>)
+                @Html.TextBoxFor(model => model.TenDangNhap, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TenDangNhap)
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Mật Khẩu</label>(<span style="color:#FF0000">*</span>)
+                @Html.TextBoxFor(model => model.MatKhau, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MatKhau)
+            </div>
+        </div>
+    </div>
+       <p>
+           <input type="submit" value="Thêm" class=" btn-add add" />
+           @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-danger btn-xs btn-canel" })
+       </p>
+}

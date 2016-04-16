@@ -1,0 +1,108 @@
+﻿.navbar.navbar-inverse.navbar-fixed-top {
+    margin: 0;
+    min-height: 30px;
+}
+
+.ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ .container li {
+    float: left;
+    line-height: 30px;
+    margin-right: 27px;
+    position: relative;
+    white-space: nowrap;
+}
+
+ .hOnline {
+    right: -300px;
+    top: 29px;
+    position: absolute;
+    z-index: 919;
+    left: 0;
+    display: none;
+    width: 210px;
+}
+
+ #h_menu_sub_on1{
+     display:none;
+ }
+
+  #support_top:hover #h_menu_sub_on1{
+       display:block;
+  }
+
+  .hOnline-order {
+    padding: 10px;
+}
+
+  .hOnline-order {
+    background-color: #f9fafc;
+    color: #000;
+    text-align: left;
+    border: solid 1px #0e74bc;
+    font-size: 12px;
+}
+
+  .hOnline-order .item .labels {
+    float: left;
+    width: 90px;
+}
+
+  #top a {
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+}
+
+  .bg.icon_yahoo {
+    background-position: -462px -32px;
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
+  .bg {
+    background: url(../images/sprite.png) no-repeat;
+    display: inline-block;
+}
+
+  #support_top .icon_drop {
+    float: right;
+    margin-top: 12px;
+}
+
+  .icon_drop {
+    background: none;
+    border: solid 5px transparent;
+    border-top-color: #fff;
+}
+
+  .bg.icon_cskh {
+    width: 24px;
+    height: 24px;
+    background-position: -372px -32px;
+    float: left;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
+  .hOnline-order .item .labels a {
+    color: #333 !important;
+    font-size: 12px !important;
+}
+
+  .bg {
+    /*background: url(../images/sprite.png) no-repeat;*/
+    display: inline-block;
+}
+
+  .bg {
+    /*background: url(../images/sprite.png) no-repeat;*/
+    display: inline-block;
+}

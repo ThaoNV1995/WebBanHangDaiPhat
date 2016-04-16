@@ -1,0 +1,65 @@
+﻿@using System.Activities.Expressions
+@using PagedList;
+@using PagedList.Mvc
+@model PagedList.IPagedList<MayTinhDaiPhat.Model.ThuongHieu>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section masterjs
+{
+    <link type="text/css" href="~/Content/assets/plugins/datatables/dataTables.bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="~/Content/assets/plugins/datatables/dataTables.fontAwesome.css" rel="stylesheet">
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="padding-bottom-10">
+            <a href="/Admin/ThuongHieu/Create" class="btn btn-primary">Thêm</a>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>Danh Mục Thương Hiệu</h2>
+                <div class="panel-ctrls">
+                    <div class="search-button">
+                        <label>
+                            @using (Html.BeginForm("Index", "ThuongHieu", FormMethod.Get))
+                            {
+                                <input type="text" id="keyword" name="searchString" class="input_search autocomplete ui-autocomplete-input" placeholder="Từ khóa tìm kiếm..." value="@ViewBag.searchString" autocomplete=" off">
+                                <button type="submit" class="btn btn-success">Tìm Kiếm</button>
+                            }
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body panel-no-padding">
+                <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Logo</th>
+                            <th>Tên Thương Hiệu</th>
+                            <th>Cấp Cha</th>
+                            <th>Chức Năng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="gradeA">
+                                <td><img src="@item.Logo" style="width:50px;height:50px;" /></td>
+                                <td>@item.TenTH</td>
+                                <td>@item.MaCha</td>
+                                <td width="200px">
+                                    @Html.ActionLink("Sửa", "Edit", new { id = item.MaTH }) |
+                                    @Html.ActionLink("Xóa", "Delete", new { id = item.MaTH })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page, @searchString = @ViewBag.searchString }))
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+﻿@model MayTinhDaiPhat.Model.ThuongHieu
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section masterjs {
+    <script src="~/Content/assets/plugins/ckfinder/ckfinder.js"></script>
+    <script>
+        $('#btnSelectImage2').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#Logo').val(url);
+            };
+            finder.popup();
+        })
+    </script>
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <legend>Thêm Thương Hiệu</legend>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="form-group">
+                    <label>Tên Thương Hiệu</label>(<span style="color:#FF0000">*</span>)
+                    @Html.TextBoxFor(model => model.TenTH, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.TenTH)
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.Logo, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Logo)
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <button type="submit" class="btn btn-primary" id="btnSelectImage2">
+                    <i class="fa fa-arrow-circle-o-down"></i>
+                    <span>Chọn Ảnh</span>
+                </button>
+            </div>
+        </div>
+         <p>
+           <input type="submit" value="Thêm" class=" btn-add add" />
+           @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-danger btn-xs btn-canel" })
+       </p>
+}
+

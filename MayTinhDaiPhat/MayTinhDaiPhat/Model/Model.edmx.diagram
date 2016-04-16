@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cba25d8a4cd547df920dadbdbf9b80c8" Name="Diagram1">
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.ChiTietHoaDonNhap" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.ChiTietHoaDonXuat" Width="1.5" PointX="8.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.DanhMuc" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.HinhAnh" Width="1.5" PointX="5.25" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.HinhThucThanhToan" Width="1.5" PointX="6" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.HoaDonNhap" Width="1.5" PointX="3" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.HoaDonXuat" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.KhachHang" Width="1.5" PointX="3.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.NhanVien" Width="1.5" PointX="0.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.NhaPhanPhoi" Width="1.5" PointX="0.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.QuangCao" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.Quyen" Width="1.5" PointX="1.5" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.SanPham" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.Slide" Width="1.5" PointX="8.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.TinTuc" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.ThuongHieu" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayTinhDaiPhatModel.TrangThaiDonHang" Width="1.5" PointX="6" PointY="11.875" IsExpanded="true" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_ChiTietHoaDonNhap_HoaDonNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_ChiTietHoaDonNhap_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_ChiTietHoaDonXuat_HinhThucThanhToan" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_ChiTietHoaDonXuat_HoaDonXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_ChiTietHoaDonXuat_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_ChiTietHoaDonXuat_TrangThaiDonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_SanPham_DanhMuc" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_TinTuc_DanhMuc" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_HinhAnh_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_HoaDonNhap_DaiLy" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_HoaDonNhap_NguoiDung" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_HoaDonXuat_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_HoaDonXuat_NguoiDung" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_NguoiDung_Quyen" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_SanPham_HangSanXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="MayTinhDaiPhatModel.FK_MaCha_DanhMuc" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

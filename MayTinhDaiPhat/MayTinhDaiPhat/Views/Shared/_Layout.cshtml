@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/style_new.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Content/js/carousel.js"></script>
+    <script src="~/Content/js/mootools.js"></script>
+    <script src="~/Content/js/lazyload.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#slider img").click(function () {
+                src = $(this).attr("src");
+                $("#fake_banner img[src='" + src + "']").hide();
+                window.location = $("#fake_banner img[src='" + src + "']").parent("a").attr("href");
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var curr_text = "";
+            var count_select = 0;
+            var curr_element = "";
+            $("#text_search").keyup(function (b) {
+                if (b.keyCode != 38 && b.keyCode != 40) {
+                    inputString = $(this).val();
+                    if (inputString.trim() != '') {
+                        $(".autocomplete-suggestions").show();
+                        $(".autocomplete-suggestions").load("/ajax/get_product_list.php?template=header&q=" + encodeURIComponent(inputString));
+                    } else {
+                        $(".autocomplete-suggestions").hide();
+                        count_select = 0;
+                    }
+                }
+
+                if (b.keyCode == 40) {
+                    count_select++;
+                    curr_element = $(".autocomplete-suggestion:nth-child(" + count_select + ")");
+
+                    curr_text = curr_element.find(".suggest_link").text();
+                    $("#text_search").val(curr_text);
+                    $(".autocomplete-suggestion").removeClass("selected");
+                    $(curr_element).addClass("selected");
+
+                }
+                if (b.keyCode == 38 && count_select > 1) {
+                    count_select--;
+                    curr_element = $(".autocomplete-suggestion:nth-child(" + count_select + ")");
+                    curr_text = curr_element.find(".suggest_link").text();
+                    $("#text_search").val(curr_text);
+                    $(".autocomplete-suggestion").removeClass("selected");
+                    $(curr_element).addClass("selected");
+                }
+            });
+
+            $('body').click(function () {
+                $(".autocomplete-suggestions").hide();
+            });
+        });
+
+        $(document).ajaxStop(function () {
+            $(".p_price,.img_price").each(function () {
+                if ($(this).html() == 'Liên hệ') $(this).css("font-family", "Roboto");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+
+        @RenderPage("_Header.cshtml")
+        <div id="nav_horizontal" class="">
+            @RenderPage("_Menu.cshtml")
+        </div><!--nav-->
+        <div class="clear"></div>
+        <script>
+            $(document).ready(function () {
+                $('#deal-home ul').carouFredSel({
+                    auto: {
+                        play: true,
+                        pauseOnHover: true
+                    },
+                    'direction': 'top',
+                    mousewheel: true,
+                    scroll: 1,
+                    pagination: {
+                        container: ".paging-deal",
+                        anchorBuilder: function (nr) {
+                            return "<span>" + nr + "</span>";
+                        }
+                    }
+                });
+            });
+        </script>
+        <div class="container">
+            <div id="banner-deal-home">
+                @RenderPage("_BannerYoutube.cshtml")
+            </div>
+            @RenderPage("_Slider.cshtml")<!--container_slider-->
+            <div class="clear space"></div>
+            <div class="clear space"></div>
+            @RenderBody()
+            <div class="clear"></div>
+            <!--brand_list-->
+            @RenderPage("_ListBrand.cshtml")
+        </div><!--container-->
+        <div class="clear space2"></div>
+        <div class="clear"></div>
+        @RenderPage("_Footer.cshtml")
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿
+<div class="clear"></div>
+<div class="container">
+    <div id="header">
+        <a href="/" id="logo">
+            <img src="~/Content/img/daiphat.png" style="width:254px;height:73px" alt="Laptop giá rẻ, Máy tính xách tay, Máy tính bảng, Linh kiện laptop">
+        </a>
+        <div id="banner_header"><a href="/ad.php?id=52" target="_blank" rel="nofollow"><img border="0" src="~/Content/img/banner_new%202-4-2013-6667544.jpg" width="720" height="80" alt=""></a></div>
+        <div id="header_right">
+            <div id="login_header">
+                <i class="bg icon_user"></i><a href="/taikhoan" rel="nofollow">Tài khoản</a>
+
+            </div>
+            <div id="cart" onclick="location.href='/gio-hang'"><i class="bg icon_cart"></i> Giỏ hàng (<span id="count_shopping_cart_store">0</span>) </div>
+        </div>
+    </div><!--header-->
+    <script type="text/javascript">
+                $(document).ready(function () {
+                    $(".sub_nav").each(function () {
+                        //sort_sub_nav(0,16,$(this).find("li"),$(this));
+                    });
+                    $("#nav_vertical li").hover(function () {
+                        $(this).children(".sub_nav").show();
+                    }, function () {
+                        $(this).children(".sub_nav").hide();
+                    });
+                });
+    </script>
+    <script type="text/javascript">
+                $(document).ready(function () {
+                    $(window).scroll(function () {
+                        t = $(window).scrollTop();
+                        if (t > 500) $("#nav_horizontal").addClass("fixed");
+                        else $("#nav_horizontal").removeClass("fixed");
+                    });
+                });
+    </script>
+    <div class="clear"></div>
+</div><!--container-->
