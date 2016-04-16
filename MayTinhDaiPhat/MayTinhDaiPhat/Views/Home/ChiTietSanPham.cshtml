@@ -1,0 +1,117 @@
+﻿@model MayTinhDaiPhat.Model.SanPham
+@{
+    ViewBag.Title = "ChiTietSanPham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/css/magiczoom.css" rel="stylesheet" />
+<script src="~/Content/css/magiczoom.js"></script>
+<script type="text/javascript">
+    MagicZoom.options = {
+        'selectors-change': 'click',
+        'right-click': true,
+        'disable-zoom': false,
+        'fit-zoom-window': false,
+        'zoom-width': 450,
+        'zoom-height': 450
+    }
+</script>
+<div id="pro_detail_page">
+    <div id="product_detail">
+        <div id="wrap_scroll" style="width:350px; float:left;">
+            <div id="img_detail">
+                <div id="img_large">
+                    <a class="MagicZoom" id="Zoomer" rel="selectors-effect-speed: 600" href="@Model.AnhSP" title="Click để xem ảnh lớn">
+                        <img src="@Model.AnhSP" title="Click để xem ảnh lớn" alt="Dell Inspiron 14 3452 Y7Y4K1" />
+                    </a>
+                </div>
+                <div class="name_show">@Model.TenSP</div>
+                <!------Phan thong tin sp ben trai, duoi anh SP----->
+            </div><!--img_detail-->
+        </div><!--wrap_scroll-->
+        <div id="overview">
+            <h1>Dell Inspiron 14 3452 Y7Y4K1</h1>
+            <p class="float_l red"><b>Mã SP:</b>@Model.MaSP &nbsp;&nbsp;&nbsp;&nbsp;<b>Lượt xem: </b>@Model.LuotXem</p>
+            <!-- AddThis Button BEGIN -->
+            <!-- AddThis Button END -->
+            <div class="hori_line"></div>
+            <div class="table_div">
+                <div class="cell">
+                    <table>
+                        <tr>
+                            <td width="120">
+                                <b>Số Lượng : </b>
+                            </td>
+                            <td>
+                                <div class="blue">
+                                    <span>@Model.SoLuong</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Ngày Đăng:</b></td>
+                            <td>@Model.NgayDang</td>
+                        </tr>
+                        <tr>
+                            <td><b>Bảo hành:</b></td>
+                            <td>@Model.BaoHanh</td>
+                        </tr>
+                    </table>
+                </div><!--cell-->
+                <div class="space2"></div>
+                <!--Phan thong tin sp ben phai anh SP-->
+                <div id="price_detail">
+                    <div class="img_price_full" style="float:left;">@Model.GiaBan</div>
+                    <div class="clear"></div>
+                </div><!--price_detail-->
+            </div><!--table_div-->
+            <div id="offer_detail">
+                <b style="color:#e00; font-weight: bold; font-size: 15px; margin-bottom:8px; display:block;">KHUYẾN MẠI:</b>
+                <span style="color:#000; font-size: 13.5px; line-height:18px;">
+                    @Model.KhuyenMai<br />
+                </span>
+            </div>
+            <div id="button_buy">
+                <a style="margin-left:0" href="javascript:addToShoppingCart('pro','7049','1','7150000')" class="btn_large_red">
+                    <span>Mua ngay</span> Giao hàng tận nơi
+                </a>
+                <a href="javascript:addToShoppingCartStop('pro','7049','1','7150000')" class=" btn_large_cyan">
+                    <span>Cho vào giỏ</span> Tiếp tục mua sắm
+                </a>
+                <a href="http://laptoptragop.vn/" rel="nofollow" target="_blank" class="btn_muatragop btn_large_orange"><span>Mua trả góp</span> Thủ tục nhanh gọn</a>
+            </div>
+            <div class="space"></div>
+        </div><!--overview-->
+
+    </div><!--product_detail-->
+</div><!--pro_detail_page-->
+<div class="container spdx">
+    <div class="title_box_center">
+        <h2 class="h_title">Sản phẩm liên quan</h2><span class="icon_right_title"></span>
+    </div><!--title_box_center-->
+    <div class="clear space"></div>
+    <div class="product_list float_l" id="spdx">
+        <ul class="ul">
+            <li class="nomar_l">
+                <div class="p_container">
+                    <a href="/acer-aspire-v3-331-p7by-nxmpjsv002-grey_id6086.html" class="p_img"><img class="lazy" src="/media/product/250_6086_acer_aspire_v3_331_p7by_nxmpjsv002_grey.jpg" alt="Acer Aspire V3-331-P7BY NX.MPJSV.002 Grey"></a>
+                    <div class="p_price img_price">8.600.000</div>
+                    <div class="container_old_price">
+
+                    </div>
+                    <div class="clear"></div>
+                    <a href="/acer-aspire-v3-331-p7by-nxmpjsv002-grey_id6086.html" class="p_name">Acer Aspire V3-331-P7BY NX.MPJSV.002 Grey</a>
+                </div><!--wrap_pro-->
+            </li>
+            <li>
+                <div class="p_container">
+                    <a href="/dell-inspiron-14-3452-y7y4k1_id7049.html" class="p_img"><img class="lazy" src="/media/product/250_7049_22730_dell_inspiron_3452_03.jpg" alt="Dell Inspiron 14 3452 Y7Y4K1"></a>
+                    <div class="p_price img_price">7.150.000</div>
+                    <div class="container_old_price">
+                    </div>
+                    <div class="clear"></div>
+                    <a href="/dell-inspiron-14-3452-y7y4k1_id7049.html" class="p_name">Dell Inspiron 14 3452 Y7Y4K1</a>
+                </div><!--wrap_pro-->
+            </li>
+        </ul>
+    </div>
+</div>

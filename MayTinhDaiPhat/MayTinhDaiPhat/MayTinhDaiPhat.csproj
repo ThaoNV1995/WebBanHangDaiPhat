@@ -152,6 +152,7 @@
     <Compile Include="Areas\Admin\Controllers\TinTucController.cs" />
     <Compile Include="Areas\Admin\Models\LoginModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="DAO\ChiTietHoaDonNhapDAO.cs" />
     <Compile Include="DAO\ChiTietHoaDonXuatDAO.cs" />
     <Compile Include="DAO\DanhMucDAO.cs" />
@@ -3556,6 +3557,8 @@
     <Content Include="Content\css\Admin.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\magiczoom.css" />
+    <Content Include="Content\css\magiczoom.js" />
     <Content Include="Content\css\style_new.css" />
     <Content Include="Content\img\10981203_515304785294395_84405105656986013_n.png" />
     <Content Include="Content\img\11059535_515304628627744_5207012924921368416_n.png" />
@@ -3642,6 +3645,7 @@
     <Content Include="Content\img\popup_pop up22.png" />
     <Content Include="Content\img\soundmax.png" />
     <Content Include="Content\img\sprite.png" />
+    <Content Include="Content\img\star_0.png" />
     <Content Include="Content\img\toshiba.gif" />
     <Content Include="Content\Index.css" />
     <Content Include="Content\js\carousel.js" />
@@ -4137,6 +4141,8 @@
     <Content Include="Views\Shared\_Slider.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_BannerYoutube.cshtml" />
+    <Content Include="Views\SanPham\ChiTietSanPham.cshtml" />
+    <Content Include="Views\Home\ChiTietSanPham.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

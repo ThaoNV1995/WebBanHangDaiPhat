@@ -19,13 +19,13 @@
                 {
                 <li>
                     <div class="p_container">
-                        <a href="#" class="p_img"><img class="lazy" src="@item.AnhSP" data-src="@item.AnhSP" alt="@item.TenSP" style="visibility: visible; zoom: 1; opacity: 1;"></a>
+                        <a href="/Home/ChiTietSanPham/+@item.MaSP" class="p_img"><img class="lazy" src="@item.AnhSP" data-src="@item.AnhSP" alt="@item.TenSP" style="visibility: visible; zoom: 1; opacity: 1;"></a>
                         <div class="p_price img_price">@String.Format("{0:N0}", item.GiaBan).Replace(",", ".")</div>
                         <div class="container_old_price">
 
                         </div>
                         <div class="clear"></div>
-                        <a href="#" class="p_name">@item.TenSP</a>
+                        <a href="/Home/ChiTietSanPham/+@item.MaSP" class="p_name">@item.TenSP</a>
                         <div class="p_quantity">
 
                             <i class="bg icon_in_stock"></i>@{if (item.SoLuong > 0)
