@@ -193,3 +193,35 @@ D:\ĐỒ ÁN 3\NhapXuat\NhapXuat\MayTinhDaiPhat.330\MayTinhDaiPhat\MayTinhDaiPha
 D:\ĐỒ ÁN 3\NhapXuat\NhapXuat\MayTinhDaiPhat.330\MayTinhDaiPhat\MayTinhDaiPhat\obj\Debug\MayTinhDaiPhat.csprojResolveAssemblyReference.cache
 D:\ĐỒ ÁN 3\NhapXuat\NhapXuat\MayTinhDaiPhat.330\MayTinhDaiPhat\MayTinhDaiPhat\obj\Debug\MayTinhDaiPhat.dll
 D:\ĐỒ ÁN 3\NhapXuat\NhapXuat\MayTinhDaiPhat.330\MayTinhDaiPhat\MayTinhDaiPhat\obj\Debug\MayTinhDaiPhat.pdb
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\MayTinhDaiPhat.dll.config
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\MayTinhDaiPhat.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\MayTinhDaiPhat.pdb
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\Antlr3.Runtime.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\CKFinder.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\EntityFramework.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\EntityFramework.SqlServer.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\Microsoft.Web.Infrastructure.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\Newtonsoft.Json.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.Helpers.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.Mvc.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.Optimization.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.Razor.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.WebPages.Deployment.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.WebPages.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.WebPages.Razor.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\WebGrease.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\CKFinder.pdb
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\EntityFramework.xml
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\EntityFramework.SqlServer.xml
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.Helpers.xml
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.Mvc.xml
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.Optimization.xml
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.Razor.xml
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.WebPages.xml
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.WebPages.Deployment.xml
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\System.Web.WebPages.Razor.xml
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\Newtonsoft.Json.xml
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\bin\Antlr3.Runtime.pdb
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\obj\Debug\MayTinhDaiPhat.csprojResolveAssemblyReference.cache
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\obj\Debug\MayTinhDaiPhat.dll
+E:\_Study\_SourceCode\_SourseGithub\WebBanHangDaiPhat\MayTinhDaiPhat\MayTinhDaiPhat\obj\Debug\MayTinhDaiPhat.pdb

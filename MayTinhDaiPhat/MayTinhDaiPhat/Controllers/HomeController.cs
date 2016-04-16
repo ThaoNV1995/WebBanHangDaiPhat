@@ -29,5 +29,10 @@ namespace MayTinhDaiPhat.Controllers
 
             return View();
         }
+        public ActionResult ChiTietSanPham(int id)
+        {
+            var model = dao.XemSanPham(id);
+            return View(model);
+        }
     }
 }
